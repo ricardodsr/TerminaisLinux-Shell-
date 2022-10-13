@@ -1,3 +1,0 @@
-# Todo
-
-Tradução para Portugues

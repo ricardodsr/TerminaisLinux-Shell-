@@ -150,3 +150,120 @@ chattr +s file1: permite que un fichero sea borrado de forma segura.
 chattr +S file1: asegura que un fichero sea modificado, los cambios son escritos en modo synchronous como con sync.
 chattr +u file1: te permite recuperar el contenido de un fichero aún si este está cancelado.
 lsattr: mostrar atributos especiales.
+
+#Archivos y Ficheros comprimidos
+
+bunzip2 file1.bz2: descomprime in fichero llamado ‘file1.bz2’.
+bzip2 file1: comprime un fichero llamado ‘file1’.
+gunzip file1.gz: descomprime un fichero llamado ‘file1.gz’.
+gzip file1: comprime un fichero llamado ‘file1’.
+gzip -9 file1: comprime con compresión máxima.
+rar a file1.rar test_file: crear un fichero rar llamado ‘file1.rar’.
+rar a file1.rar file1 file2 dir1: comprimir ‘file1’, ‘file2’ y ‘dir1’ simultáneamente.
+rar x file1.rar: descomprimir archivo rar.
+unrar x file1.rar: descomprimir archivo rar.
+tar -cvf archive.tar file1: crear un tarball descomprimido.
+tar -cvf archive.tar file1 file2 dir1: crear un archivo conteniendo ‘file1’, ‘file2′ y’dir1’.
+tar -tf archive.tar: mostrar los contenidos de un archivo.
+tar -xvf archive.tar: extraer un tarball.
+tar -xvf archive.tar -C /tmp: extraer un tarball en / tmp.
+tar -cvfj archive.tar.bz2 dir1: crear un tarball comprimido dentro de bzip2.
+tar -xvfj archive.tar.bz2: descomprimir un archivo tar comprimido en bzip2
+tar -cvfz archive.tar.gz dir1: crear un tarball comprimido en gzip.
+tar -xvfz archive.tar.gz: descomprimir un archive tar comprimido en gzip.
+zip file1.zip file1: crear un archivo comprimido en zip.
+zip -r file1.zip file1 file2 dir1: comprimir, en zip, varios archivos y directorios de forma simultánea.
+unzip file1.zip: descomprimir un archivo zip.
+
+# Paquetes Deb (Debian, Ubuntu y derivados)
+
+dpkg -i package.deb: instalar / actualizar un paquete deb.
+dpkg -r package_name: eliminar un paquete deb del sistema.
+dpkg -l: mostrar todos los paquetes deb instalados en el sistema.
+dpkg -l | grep httpd: mostrar todos los paquetes deb con el nombre “httpd”
+dpkg -s package_name: obtener información en un paquete específico instalado en el sistema.
+dpkg -L package_name: mostar lista de ficheros dados por un paquete instalado en el sistema.
+dpkg –contents package.deb: mostrar lista de ficheros dados por un paquete no instalado todavía.
+dpkg -S /bin/ping: verificar cuál paquete pertenece a un fichero dado.
+
+# Actualizador de paquetes APT (Debian, Ubuntu y derivados)
+
+apt-get install package_name: instalar / actualizar un paquete deb.
+apt-cdrom install package_name: instalar / actualizar un paquete deb desde un cdrom.
+apt-get update: actualizar la lista de paquetes.
+apt-get upgrade: actualizar todos los paquetes instalados.
+apt-get remove package_name: eliminar un paquete deb del sistema.
+apt-get check: verificar la correcta resolución de las dependencias.
+apt-get clean: limpiar cache desde los paquetes descargados.
+apt-cache search searched-package: retorna lista de paquetes que corresponde a la serie «paquetes buscados».
+
+#Ver el contenido de un fichero
+
+cat file1: ver los contenidos de un fichero comenzando desde la primera hilera.
+tac file1: ver los contenidos de un fichero comenzando desde la última línea.
+more file1: ver el contenido a lo largo de un fichero.
+less file1: parecido al commando ‘more’ pero permite salvar el movimiento en el fichero así como el movimiento hacia atrás.
+head -2 file1: ver las dos primeras líneas de un fichero.
+tail -2 file1: ver las dos últimas líneas de un fichero.
+tail -f /var/log/messages: ver en tiempo real qué ha sido añadido al fichero.
+
+#Manipulación de texto
+
+cat file1 file2 .. | command <> file1_in.txt_or_file1_out.txt: sintaxis general para la manipulación de texto utilizando PIPE, STDIN y STDOUT.
+cat file1 | command( sed, grep, awk, grep, etc…) > result.txt: sintaxis general para manipular un texto de un fichero y escribir el resultado en un fichero nuevo.
+cat file1 | command( sed, grep, awk, grep, etc…) » result.txt: sintaxis general para manipular un texto de un fichero y añadir resultado en un fichero existente.
+grep Aug /var/log/messages: buscar palabras “Aug” en el fichero ‘/var/log/messages’.
+grep ^Aug /var/log/messages: buscar palabras que comienzan con “Aug” en fichero ‘/var/log/messages’
+grep [0-9] /var/log/messages: seleccionar todas las líneas del fichero ‘/var/log/messages’ que contienen números.
+grep Aug -R /var/log/*: buscar la cadena “Aug” en el directorio ‘/var/log’ y debajo.
+sed ‘s/stringa1/stringa2/g’ example.txt: reubicar “string1” con “string2” en ejemplo.txt
+sed ‘/^$/d’ example.txt: eliminar todas las líneas en blanco desde el ejemplo.txt
+sed ‘/ *#/d; /^$/d’ example.txt: eliminar comentarios y líneas en blanco de ejemplo.txt
+echo ‘esempio’ | tr ‘[:lower:]’ ‘[:upper:]’: convertir minúsculas en mayúsculas.
+sed -e ‘1d’ result.txt: elimina la primera línea del fichero ejemplo.txt
+sed -n ‘/stringa1/p’: visualizar solamente las líneas que contienen la palabra “string1”.
+
+# Análisis del sistema de ficheros
+badblocks -v /dev/hda1: Chequear los bloques defectuosos en el disco hda1.
+fsck /dev/hda1: reparar / chequear la integridad del fichero del sistema Linux en el disco hda1.
+fsck.ext2 /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 2 en el disco hda1.
+e2fsck /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 2 en el disco hda1.
+e2fsck -j /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 3 en el disco hda1.
+fsck.ext3 /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 3 en el disco hda1.
+fsck.vfat /dev/hda1: reparar / chequear la integridad del fichero sistema fat en el disco hda1.
+fsck.msdos /dev/hda1: reparar / chequear la integridad de un fichero del sistema dos en el disco hda1.
+dosfsck /dev/hda1: reparar / chequear la integridad de un fichero del sistema dos en el disco hda1.
+
+# Formatear un sistema de ficheros
+
+mkfs /dev/hda1: crear un fichero de sistema tipo Linux en la partición hda1.
+mke2fs /dev/hda1: crear un fichero de sistema tipo Linux ext 2 en hda1.
+mke2fs -j /dev/hda1: crear un fichero de sistema tipo Linux ext3 (periódico) en la partición hda1.
+mkfs -t vfat 32 -F /dev/hda1: crear un fichero de sistema FAT32 en hda1.
+fdformat -n /dev/fd0: formatear un disco flooply.
+mkswap /dev/hda3: crear un fichero de sistema swap.
+
+# Trabajo con la SWAP
+
+mkswap /dev/hda3: crear fichero de sistema swap.
+swapon /dev/hda3: activando una nueva partición swap.
+swapon /dev/hda2 /dev/hdb3: activar dos particiones swap.
+
+#(Backup)
+ dump -0aj -f /tmp/home0.bak /home: hacer una salva completa del directorio ‘/home’.
+dump -1aj -f /tmp/home0.bak /home: hacer una salva incremental del directorio ‘/home’.
+restore -if /tmp/home0.bak: restaurando una salva interactivamente.
+rsync -rogpav –delete /home /tmp: sincronización entre directorios.
+rsync -rogpav -e ssh –delete /home ip_address:/tmp: rsync a través del túnel SSH.
+rsync -az -e ssh –delete ip_addr:/home/public /home/local: sincronizar un directorio local con un directorio remoto a través de ssh y de compresión.
+rsync -az -e ssh –delete /home/local ip_addr:/home/public: sincronizar un directorio remoto con un directorio local a través de ssh y de compresión.
+dd bs=1M if=/dev/hda | gzip | ssh user@ip_addr ‘dd of=hda.gz’: hacer una salva de un disco duro en un host remoto a través de ssh.
+dd if=/dev/sda of=/tmp/file1: salvar el contenido de un disco duro a un fichero. (En este caso el disco duro es “sda” y el fichero “file1”).
+tar -Puf backup.tar /home/user: hacer una salva incremental del directorio ‘/home/user’.
+( cd /tmp/local/ && tar c . ) | ssh -C user@ip_addr ‘cd /home/share/ && tar x -p’: copiar el contenido de un directorio en un directorio remoto a través de ssh.
+( tar c /home ) | ssh -C user@ip_addr ‘cd /home/backup-home && tar x -p’: copiar un directorio local en un directorio remoto a través de ssh.
+tar cf – . | (cd /tmp/backup ; tar xf – ): copia local conservando las licencias y enlaces desde un directorio a otro.
+find /home/user1 -name ‘*.txt’ | xargs cp -av –target-directory=/home/backup/ –parents: encontrar y copiar todos los ficheros con extensión ‘.txt’ de un directorio a otro.
+find /var/log -name ‘*.log’ | tar cv –files-from=- | bzip2 > log.tar.bz2: encontrar todos los ficheros con extensión ‘.log’ y hacer un archivo bzip.
+dd if=/dev/hda of=/dev/fd0 bs=512 count=1: hacer una copia del MRB (Master Boot Record) a un disco floppy.
+dd if=/dev/fd0 of=/dev/hda bs=512 count=1: restaurar la copia del MBR (Master Boot Record) salvada en un floppy.

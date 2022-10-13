@@ -1,53 +1,53 @@
 # Información del sistema
-arch: mostrar la arquitectura de la máquina (1).
-uname -m: mostrar la arquitectura de la máquina (2).
-uname -r: mostrar la versión del kernel usado.
-dmidecode -q: mostrar los componentes (hardware) del sistema.
-hdparm -i /dev/hda: mostrar las características de un disco duro.
-hdparm -tT /dev/sda: realizar prueba de lectura en un disco duro.
-cat /proc/cpuinfo: mostrar información de la CPU.
-cat /proc/interrupts: mostrar las interrupciones.
-cat /proc/meminfo: verificar el uso de memoria.
-cat /proc/swaps: mostrar ficheros swap.
-cat /proc/version: mostrar la versión del kernel.
-cat /proc/net/dev: mostrar adaptadores de red y estadísticas.
-cat /proc/mounts: mostrar el sistema de ficheros montado.
-lspci -tv: mostrar los dispositivos PCI.
-lsusb -tv: mostrar los dispositivos USB.
-date: mostrar la fecha del sistema.
-cal 2011: mostrar el almanaque de 2011.
-cal 07 2011: mostrar el almanaque para el mes julio de 2011.
-date 041217002011.00: colocar (declarar, ajustar) fecha y hora.
-clock -w: guardar los cambios de fecha en la BIOS.
+arch: mostrar la arquitectura de la máquina.<br>
+uname -m: mostrar la arquitectura de la máquina .<br>
+uname -r: mostrar la versión del kernel usado.<br>
+dmidecode -q: mostrar los componentes (hardware) del sistema.<br>
+hdparm -i /dev/hda: mostrar las características de un disco duro.<br>
+hdparm -tT /dev/sda: realizar prueba de lectura en un disco duro.<br>
+cat /proc/cpuinfo: mostrar información de la CPU.<br>
+cat /proc/interrupts: mostrar las interrupciones.<br>
+cat /proc/meminfo: verificar el uso de memoria.<br>
+cat /proc/swaps: mostrar ficheros swap.<br>
+cat /proc/version: mostrar la versión del kernel.<br>
+cat /proc/net/dev: mostrar adaptadores de red y estadísticas.<br>
+cat /proc/mounts: mostrar el sistema de ficheros montado.<br>
+lspci -tv: mostrar los dispositivos PCI.<br>
+lsusb -tv: mostrar los dispositivos USB.<br>
+date: mostrar la fecha del sistema.<br>
+cal 2011: mostrar el almanaque de 2011.<br>
+cal 07 2011: mostrar el almanaque para el mes julio de 2011.<br>
+date 041217002011.00: colocar (declarar, ajustar) fecha y hora.<br>
+clock -w: guardar los cambios de fecha en la BIOS.<br>
 
 # Apagar (Reiniciar Sistema o Cerrar Sesión)
 
-shutdown -h now: apagar el sistema (1).
-init 0: apagar el sistema (2).
-telinit 0: apagar el sistema (3).
-halt: apagar el sistema (4).
-shutdown -h hours:minutes &: apagado planificado del sistema.
-shutdown -c: cancelar un apagado planificado del sistema.
-shutdown -r now: reiniciar (1).
-reboot: reiniciar (2).
-logout: cerrar sesión.
+shutdown -h now: apagar el sistema (1).<br>
+init 0: apagar el sistema (2).<br>
+telinit 0: apagar el sistema (3).<br>
+halt: apagar el sistema (4).<br>
+shutdown -h hours:minutes &: apagado planificado del sistema.<br>
+shutdown -c: cancelar un apagado planificado del sistema.<br>
+shutdown -r now: reiniciar (1).<br>
+reboot: reiniciar (2).<br>
+logout: cerrar sesión.<br>
 
 # Archivos y Directorios
 
-cd /home: entrar en el directorio “home”.
-cd ..: retroceder un nivel.
-cd ../..: retroceder 2 niveles.
-cd: ir al directorio raíz.
-cd ~user1: ir al directorio user1.
-cd –: ir (regresar) al directorio anterior.
-pwd: mostrar el camino del directorio de trabajo.
-ls: ver los ficheros de un directorio.
-ls -F: ver los ficheros de un directorio.
-ls -l: mostrar los detalles de ficheros y carpetas de un directorio.
-ls -a: mostrar los ficheros ocultos.
-ls *[0-9]*: mostrar los ficheros y carpetas que contienen números.
-tree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.(1)
-lstree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.(2)
+cd /home: entrar en el directorio “home”.<br>
+cd ..: retroceder un nivel.<br>
+cd ../..: retroceder 2 niveles.<br>
+cd: ir al directorio raíz.<br>
+cd ~user1: ir al directorio user1.<br>
+cd –: ir (regresar) al directorio anterior.<br>
+pwd: mostrar el camino del directorio de trabajo.<br>
+ls: ver los ficheros de un directorio.<br>
+ls -F: ver los ficheros de un directorio.<br>
+ls -l: mostrar los detalles de ficheros y carpetas de un directorio.<br>
+ls -a: mostrar los ficheros ocultos.<br>
+ls *[0-9]*: mostrar los ficheros y carpetas que contienen números.<br>
+tree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.(1)<br>
+lstree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.(2)<br>
 mkdir dir1: crear una carpeta o directorio con nombre ‘dir1’.
 mkdir dir1 dir2: crear dos carpetas o directorios simultáneamente (Crear dos directorios a la vez).
 mkdir -p /tmp/dir1/dir2: crear un árbol de directorios.

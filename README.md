@@ -1,6 +1,6 @@
 # Terminais
 Comandos de terminal para linux
 
-#TODO
+# TODO
 
 Traduzir para Português

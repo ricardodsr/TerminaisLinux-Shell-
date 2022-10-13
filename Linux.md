@@ -46,166 +46,166 @@ ls -F: ver los ficheros de un directorio.<br>
 ls -l: mostrar los detalles de ficheros y carpetas de un directorio.<br>
 ls -a: mostrar los ficheros ocultos.<br>
 ls *[0-9]*: mostrar los ficheros y carpetas que contienen números.<br>
-tree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.(1)<br>
-lstree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.(2)<br>
-mkdir dir1: crear una carpeta o directorio con nombre ‘dir1’.
-mkdir dir1 dir2: crear dos carpetas o directorios simultáneamente (Crear dos directorios a la vez).
-mkdir -p /tmp/dir1/dir2: crear un árbol de directorios.
-rm -f file1: borrar el fichero llamado ‘file1’.
-rmdir dir1: borrar la carpeta llamada ‘dir1’.
-rm -rf dir1: eliminar una carpeta llamada ‘dir1’ con su contenido de forma recursiva. (Si lo borro recursivo estoy diciendo que es con su contenido).
-rm -rf dir1 dir2: borrar dos carpetas (directorios) con su contenido de forma recursiva.
-mv dir1 new_dir: renombrar o mover un fichero o carpeta (directorio).
-cp file1: copiar un fichero.
-cp file1 file2: copiar dos ficheros al unísono.
-cp dir /* .: copiar todos los ficheros de un directorio dentro del directorio de trabajo actual.
-cp -a /tmp/dir1 .: copiar un directorio dentro del directorio actual de trabajo.
-cp -a dir1: copiar un directorio.
-cp -a dir1 dir2: copiar dos directorio al unísono.
-ln -s file1 lnk1: crear un enlace simbólico al fichero o directorio.
-ln file1 lnk1: crear un enlace físico al fichero o directorio.
-touch -t 0712250000 file1: modificar el tiempo real (tiempo de creación) de un fichero o directorio.
-file file1: salida (volcado en pantalla) del tipo mime de un fichero texto.
-iconv -l: listas de cifrados conocidos.
-iconv -f fromEncoding -t toEncoding inputFile > outputFile: crea una nueva forma del fichero de entrada asumiendo que está codificado en fromEncoding y convirtiéndolo a ToEncoding.
-find . -maxdepth 1 -name *.jpg -print -exec convert ”{}” -resize 80×60 “thumbs/{}” \;: agrupar ficheros redimensionados en el directorio actual y enviarlos a directorios en vistas de miniaturas (requiere convertir desde ImagemagicK).
+tree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.<br>
+lstree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.<br>
+mkdir dir1: crear una carpeta o directorio con nombre ‘dir1’.<br>
+mkdir dir1 dir2: crear dos carpetas o directorios simultáneamente (Crear dos directorios a la vez).<br>
+mkdir -p /tmp/dir1/dir2: crear un árbol de directorios.<br>
+rm -f file1: borrar el fichero llamado ‘file1’.<br>
+rmdir dir1: borrar la carpeta llamada ‘dir1’.<br>
+rm -rf dir1: eliminar una carpeta llamada ‘dir1’ con su contenido de forma recursiva. (Si lo borro recursivo estoy diciendo que es con su contenido).<br>
+rm -rf dir1 dir2: borrar dos carpetas (directorios) con su contenido de forma recursiva.<br>
+mv dir1 new_dir: renombrar o mover un fichero o carpeta (directorio).<br>
+cp file1: copiar un fichero.<br>
+cp file1 file2: copiar dos ficheros al unísono.<br>
+cp dir /* .: copiar todos los ficheros de un directorio dentro del directorio de trabajo actual.<br>
+cp -a /tmp/dir1 .: copiar un directorio dentro del directorio actual de trabajo.<br>
+cp -a dir1: copiar un directorio.<br>
+cp -a dir1 dir2: copiar dos directorio al unísono.<br>
+ln -s file1 lnk1: crear un enlace simbólico al fichero o directorio.<br>
+ln file1 lnk1: crear un enlace físico al fichero o directorio.<br>
+touch -t 0712250000 file1: modificar el tiempo real (tiempo de creación) de un fichero o directorio.<br>
+file file1: salida (volcado en pantalla) del tipo mime de un fichero texto.<br>
+iconv -l: listas de cifrados conocidos.<br>
+iconv -f fromEncoding -t toEncoding inputFile > outputFile: crea una nueva forma del fichero de entrada asumiendo que está codificado en fromEncoding y convirtiéndolo a ToEncoding.<br>
+find . -maxdepth 1 -name *.jpg -print -exec convert ”{}” -resize 80×60 “thumbs/{}” \;: agrupar ficheros redimensionados en el directorio actual y enviarlos a directorios en vistas de miniaturas (requiere convertir desde ImagemagicK).<br>
 
 # Encontrar archivos
 
-find / -name file1: buscar fichero y directorio a partir de la raíz del sistema.
-find / -user user1: buscar ficheros y directorios pertenecientes al usuario ‘user1’.
-find /home/user1 -name \*.bin: buscar ficheros con extensión ‘. bin’ dentro del directorio ‘/ home/user1’.
-find /usr/bin -type f -atime +100: buscar ficheros binarios no usados en los últimos 100 días.
-find /usr/bin -type f -mtime -10: buscar ficheros creados o cambiados dentro de los últimos 10 días.
-find / -name \*.rpm -exec chmod 755 ‘{}’ \;: buscar ficheros con extensión ‘.rpm’ y modificar permisos.
+find / -name file1: buscar fichero y directorio a partir de la raíz del sistema.<br>
+find / -user user1: buscar ficheros y directorios pertenecientes al usuario ‘user1’.<br>
+find /home/user1 -name \*.bin: buscar ficheros con extensión ‘. bin’ dentro del directorio ‘/ home/user1’.<br>
+find /usr/bin -type f -atime +100: buscar ficheros binarios no usados en los últimos 100 días.<br>
+find /usr/bin -type f -mtime -10: buscar ficheros creados o cambiados dentro de los últimos 10 días.<br>
+find / -name \*.rpm -exec chmod 755 ‘{}’ \;: buscar ficheros con extensión ‘.rpm’ y modificar permisos.<br>
 find / -xdev -name \*.rpm: Buscar ficheros con extensión ‘.rpm’ ignorando los dispositivos removibles como cdrom, pen-drive, etc.…
-locate \*.ps: encuentra ficheros con extensión ‘.ps’ ejecutados primeramente con el command ‘updatedb’.
-whereis halt: mostrar la ubicación de un fichero binario, de ayuda o fuente. En este caso pregunta dónde está el comando ‘halt’.
-which halt: mostrar la senda completa (el camino completo) a un binario / ejecutable.
+locate \*.ps: encuentra ficheros con extensión ‘.ps’ ejecutados primeramente con el command ‘updatedb’.<br>
+whereis halt: mostrar la ubicación de un fichero binario, de ayuda o fuente. En este caso pregunta dónde está el comando ‘halt’.<br>
+which halt: mostrar la senda completa (el camino completo) a un binario / ejecutable.<br>
 
 # Montando un sistema de ficheros
 
-mount /dev/hda2 /mnt/hda2: montar un disco llamado hda2. Verifique primero la existencia del directorio ‘/ mnt/hda2’; si no está, debe crearlo.
-umount /dev/hda2: desmontar un disco llamado hda2. Salir primero desde el punto ‘/ mnt/hda2.
-fuser -km /mnt/hda2: forzar el desmontaje cuando el dispositivo está ocupado.
-umount -n /mnt/hda2: correr el desmontaje sin leer el fichero /etc/mtab. Útil cuando el fichero es de solo lectura o el disco duro está lleno.
-mount /dev/fd0 /mnt/floppy: montar un disco flexible (floppy).
-mount /dev/cdrom /mnt/cdrom: montar un cdrom / dvdrom.
-mount /dev/hdc /mnt/cdrecorder: montar un cd regrabable o un dvdrom.
-mount /dev/hdb /mnt/cdrecorder: montar un cd regrabable / dvdrom (un dvd).
-mount -o loop file.iso /mnt/cdrom: montar un fichero o una imagen iso.
-mount -t vfat /dev/hda5 /mnt/hda5: montar un sistema de ficheros FAT32.
-mount /dev/sda1 /mnt/usbdisk: montar un usb pen-drive o una memoria (sin especificar el tipo de sistema de ficheros).
+mount /dev/hda2 /mnt/hda2: montar un disco llamado hda2. Verifique primero la existencia del directorio ‘/ mnt/hda2’; si no está, debe crearlo.<br>
+umount /dev/hda2: desmontar un disco llamado hda2. Salir primero desde el punto ‘/ mnt/hda2.<br>
+fuser -km /mnt/hda2: forzar el desmontaje cuando el dispositivo está ocupado.<br>
+umount -n /mnt/hda2: correr el desmontaje sin leer el fichero /etc/mtab. Útil cuando el fichero es de solo lectura o el disco duro está lleno.<br>
+mount /dev/fd0 /mnt/floppy: montar un disco flexible (floppy).<br>
+mount /dev/cdrom /mnt/cdrom: montar un cdrom / dvdrom.<br>
+mount /dev/hdc /mnt/cdrecorder: montar un cd regrabable o un dvdrom.<br>
+mount /dev/hdb /mnt/cdrecorder: montar un cd regrabable / dvdrom (un dvd).<br>
+mount -o loop file.iso /mnt/cdrom: montar un fichero o una imagen iso.<br>
+mount -t vfat /dev/hda5 /mnt/hda5: montar un sistema de ficheros FAT32.<br>
+mount /dev/sda1 /mnt/usbdisk: montar un usb pen-drive o una memoria (sin especificar el tipo de sistema de ficheros).<br>
 
 # Espacio de Disco
 
-df -h: mostrar una lista de las particiones montadas.
-ls -lSr |more: mostrar el tamaño de los ficheros y directorios ordenados por tamaño.
-du -sh dir1: Estimar el espacio usado por el directorio ‘dir1’.
-du -sk * | sort -rn: mostrar el tamaño de los ficheros y directorios ordenados por tamaño.
+df -h: mostrar una lista de las particiones montadas.<br>
+ls -lSr |more: mostrar el tamaño de los ficheros y directorios ordenados por tamaño.<br>
+du -sh dir1: Estimar el espacio usado por el directorio ‘dir1’.<br>
+du -sk * | sort -rn: mostrar el tamaño de los ficheros y directorios ordenados por tamaño.<br>
 rpm -q -a –qf ‘%10{SIZE}t%{NAME}n’ | sort -k1,1n: mostrar el espacio usado por los paquetes rpm instalados organizados por tamaño (Fedora, Redhat y otros).
-dpkg-query -W -f=’${Installed-Size;10}t${Package}n’ | sort -k1,1n: mostrar el espacio usado por los paquetes instalados, organizados por tamaño (Ubuntu, Debian y otros).
+dpkg-query -W -f=’${Installed-Size;10}t${Package}n’ | sort -k1,1n: mostrar el espacio usado por los paquetes instalados, organizados por tamaño (Ubuntu, Debian y otros).<br>
 
 # Usuarios y Grupos
 
-groupadd nombre_del_grupo: crear un nuevo grupo.
-groupdel nombre_del_grupo: borrar un grupo.
-groupmod -n nuevo_nombre_del_grupo viejo_nombre_del_grupo: renombrar un grupo.
-useradd -c “Name Surname ” -g admin -d /home/user1 -s /bin/bash user1: Crear un nuevo usuario perteneciente al grupo “admin”.
-useradd user1: crear un nuevo usuario.
-userdel -r user1: borrar un usuario (‘-r’ elimina el directorio Home).
-usermod -c “User FTP” -g system -d /ftp/user1 -s /bin/nologin user1: cambiar los atributos del usuario.
-passwd: cambiar contraseña.
-passwd user1: cambiar la contraseña de un usuario (solamente por root).
-chage -E 2011-12-31 user1: colocar un plazo para la contraseña del usuario. En este caso dice que la clave expira el 31 de diciembre de 2011.
-pwck: chequear la sintaxis correcta el formato de fichero de ‘/etc/passwd’ y la existencia de usuarios.
-grpck: chequear la sintaxis correcta y el formato del fichero ‘/etc/group’ y la existencia de grupos.
-newgrp group_name: registra a un nuevo grupo para cambiar el grupo predeterminado de los ficheros creados recientemente.
+groupadd nombre_del_grupo: crear un nuevo grupo.<br>
+groupdel nombre_del_grupo: borrar un grupo.<br>
+groupmod -n nuevo_nombre_del_grupo viejo_nombre_del_grupo: renombrar un grupo.<br>
+useradd -c “Name Surname ” -g admin -d /home/user1 -s /bin/bash user1: Crear un nuevo usuario perteneciente al grupo “admin”.<br>
+useradd user1: crear un nuevo usuario.<br>
+userdel -r user1: borrar un usuario (‘-r’ elimina el directorio Home).<br>
+usermod -c “User FTP” -g system -d /ftp/user1 -s /bin/nologin user1: cambiar los atributos del usuario.<br>
+passwd: cambiar contraseña.<br>
+passwd user1: cambiar la contraseña de un usuario (solamente por root).<br><br>
+chage -E 2011-12-31 user1: colocar un plazo para la contraseña del usuario. En este caso dice que la clave expira el 31 de diciembre de 2011.<br>
+pwck: chequear la sintaxis correcta el formato de fichero de ‘/etc/passwd’ y la existencia de usuarios.<br>
+grpck: chequear la sintaxis correcta y el formato del fichero ‘/etc/group’ y la existencia de grupos.<br>
+newgrp group_name: registra a un nuevo grupo para cambiar el grupo predeterminado de los ficheros creados recientemente.<br>
 
 # Permisos en Ficheros (Usa ”+” para colocar permisos y ”-” para eliminar)
 
-ls -lh: Mostrar permisos.
-ls /tmp | pr -T5 -W$COLUMNS: dividir la terminal en 5 columnas.
-chmod ugo+rwx directory1: colocar permisos de lectura ®, escritura (w) y ejecución(x) al propietario (u), al grupo (g) y a otros (o) sobre el directorio ‘directory1’.
-chmod go-rwx directory1: quitar permiso de lectura ®, escritura (w) y (x) ejecución al grupo (g) y otros (o) sobre el directorio ‘directory1’.
-chown user1 file1: cambiar el dueño de un fichero.
-chown -R user1 directory1: cambiar el propietario de un directorio y de todos los ficheros y directorios contenidos dentro.
-chgrp group1 file1: cambiar grupo de ficheros.
-chown user1:group1 file1: cambiar usuario y el grupo propietario de un fichero.
-find / -perm -u+s: visualizar todos los ficheros del sistema con SUID configurado.
-chmod u+s /bin/file1: colocar el bit SUID en un fichero binario. El usuario que corriendo ese fichero adquiere los mismos privilegios como dueño.
-chmod u-s /bin/file1: deshabilitar el bit SUID en un fichero binario.
-chmod g+s /home/public: colocar un bit SGID en un directorio –similar al SUID pero por directorio.
-chmod g-s /home/public: desabilitar un bit SGID en un directorio.
-chmod o+t /home/public: colocar un bit STIKY en un directorio. Permite el borrado de ficheros solamente a los dueños legítimos.
-chmod o-t /home/public: desabilitar un bit STIKY en un directorio.
+ls -lh: Mostrar permisos.<br>
+ls /tmp | pr -T5 -W$COLUMNS: dividir la terminal en 5 columnas.<br>
+chmod ugo+rwx directory1: colocar permisos de lectura ®, escritura (w) y ejecución(x) al propietario (u), al grupo (g) y a otros (o) sobre el directorio ‘directory1’.<br>
+chmod go-rwx directory1: quitar permiso de lectura ®, escritura (w) y (x) ejecución al grupo (g) y otros (o) sobre el directorio ‘directory1’.<br>
+chown user1 file1: cambiar el dueño de un fichero.<br>
+chown -R user1 directory1: cambiar el propietario de un directorio y de todos los ficheros y directorios contenidos dentro.<br>
+chgrp group1 file1: cambiar grupo de ficheros.<br>
+chown user1:group1 file1: cambiar usuario y el grupo propietario de un fichero.<br>
+find / -perm -u+s: visualizar todos los ficheros del sistema con SUID configurado.<br>
+chmod u+s /bin/file1: colocar el bit SUID en un fichero binario. El usuario que corriendo ese fichero adquiere los mismos privilegios como dueño.<br>
+chmod u-s /bin/file1: deshabilitar el bit SUID en un fichero binario.<br>
+chmod g+s /home/public: colocar un bit SGID en un directorio –similar al SUID pero por directorio.<br>
+chmod g-s /home/public: desabilitar un bit SGID en un directorio.<br>
+chmod o+t /home/public: colocar un bit STIKY en un directorio. Permite el borrado de ficheros solamente a los dueños legítimos.<br>
+chmod o-t /home/public: desabilitar un bit STIKY en un directorio.<br>
 
  #Atributos especiales en ficheros (Usa ”+” para colocar permisos y ”-” para eliminar)
 
-chattr +a file1: permite escribir abriendo un fichero solamente modo append.
-chattr +c file1: permite que un fichero sea comprimido / descomprimido automaticamente.
-chattr +d file1: asegura que el programa ignore borrar los ficheros durante la copia de seguridad.
-chattr +i file1: convierte el fichero en invariable, por lo que no puede ser eliminado, alterado, renombrado, ni enlazado.
-chattr +s file1: permite que un fichero sea borrado de forma segura.
-chattr +S file1: asegura que un fichero sea modificado, los cambios son escritos en modo synchronous como con sync.
-chattr +u file1: te permite recuperar el contenido de un fichero aún si este está cancelado.
-lsattr: mostrar atributos especiales.
+chattr +a file1: permite escribir abriendo un fichero solamente modo append.<br>
+chattr +c file1: permite que un fichero sea comprimido / descomprimido automaticamente.<br>
+chattr +d file1: asegura que el programa ignore borrar los ficheros durante la copia de seguridad.<br>
+chattr +i file1: convierte el fichero en invariable, por lo que no puede ser eliminado, alterado, renombrado, ni enlazado.<br>
+chattr +s file1: permite que un fichero sea borrado de forma segura.<br>
+chattr +S file1: asegura que un fichero sea modificado, los cambios son escritos en modo synchronous como con sync.<br>
+chattr +u file1: te permite recuperar el contenido de un fichero aún si este está cancelado.<br>
+lsattr: mostrar atributos especiales.<br>
 
 #Archivos y Ficheros comprimidos
 
-bunzip2 file1.bz2: descomprime in fichero llamado ‘file1.bz2’.
-bzip2 file1: comprime un fichero llamado ‘file1’.
-gunzip file1.gz: descomprime un fichero llamado ‘file1.gz’.
-gzip file1: comprime un fichero llamado ‘file1’.
-gzip -9 file1: comprime con compresión máxima.
-rar a file1.rar test_file: crear un fichero rar llamado ‘file1.rar’.
-rar a file1.rar file1 file2 dir1: comprimir ‘file1’, ‘file2’ y ‘dir1’ simultáneamente.
-rar x file1.rar: descomprimir archivo rar.
-unrar x file1.rar: descomprimir archivo rar.
-tar -cvf archive.tar file1: crear un tarball descomprimido.
-tar -cvf archive.tar file1 file2 dir1: crear un archivo conteniendo ‘file1’, ‘file2′ y’dir1’.
-tar -tf archive.tar: mostrar los contenidos de un archivo.
-tar -xvf archive.tar: extraer un tarball.
-tar -xvf archive.tar -C /tmp: extraer un tarball en / tmp.
-tar -cvfj archive.tar.bz2 dir1: crear un tarball comprimido dentro de bzip2.
-tar -xvfj archive.tar.bz2: descomprimir un archivo tar comprimido en bzip2
-tar -cvfz archive.tar.gz dir1: crear un tarball comprimido en gzip.
-tar -xvfz archive.tar.gz: descomprimir un archive tar comprimido en gzip.
-zip file1.zip file1: crear un archivo comprimido en zip.
-zip -r file1.zip file1 file2 dir1: comprimir, en zip, varios archivos y directorios de forma simultánea.
-unzip file1.zip: descomprimir un archivo zip.
+bunzip2 file1.bz2: descomprime in fichero llamado ‘file1.bz2’.<br>
+bzip2 file1: comprime un fichero llamado ‘file1’.<br>
+gunzip file1.gz: descomprime un fichero llamado ‘file1.gz’.<br>
+gzip file1: comprime un fichero llamado ‘file1’.<br>
+gzip -9 file1: comprime con compresión máxima.<br>
+rar a file1.rar test_file: crear un fichero rar llamado ‘file1.rar’.<br>
+rar a file1.rar file1 file2 dir1: comprimir ‘file1’, ‘file2’ y ‘dir1’ simultáneamente.<br>
+rar x file1.rar: descomprimir archivo rar.<br>
+unrar x file1.rar: descomprimir archivo rar.<br>
+tar -cvf archive.tar file1: crear un tarball descomprimido.<br>
+tar -cvf archive.tar file1 file2 dir1: crear un archivo conteniendo ‘file1’, ‘file2′ y’dir1’.<br>
+tar -tf archive.tar: mostrar los contenidos de un archivo.<br>
+tar -xvf archive.tar: extraer un tarball.<br>
+tar -xvf archive.tar -C /tmp: extraer un tarball en / tmp.<br>
+tar -cvfj archive.tar.bz2 dir1: crear un tarball comprimido dentro de bzip2.<br>
+tar -xvfj archive.tar.bz2: descomprimir un archivo tar comprimido en bzip2.<br>
+tar -cvfz archive.tar.gz dir1: crear un tarball comprimido en gzip.<br>
+tar -xvfz archive.tar.gz: descomprimir un archive tar comprimido en gzip.<br>
+zip file1.zip file1: crear un archivo comprimido en zip.<br>
+zip -r file1.zip file1 file2 dir1: comprimir, en zip, varios archivos y directorios de forma simultánea.<br>
+unzip file1.zip: descomprimir un archivo zip.<br>
 
 # Paquetes Deb (Debian, Ubuntu y derivados)
 
-dpkg -i package.deb: instalar / actualizar un paquete deb.
-dpkg -r package_name: eliminar un paquete deb del sistema.
-dpkg -l: mostrar todos los paquetes deb instalados en el sistema.
-dpkg -l | grep httpd: mostrar todos los paquetes deb con el nombre “httpd”
-dpkg -s package_name: obtener información en un paquete específico instalado en el sistema.
-dpkg -L package_name: mostar lista de ficheros dados por un paquete instalado en el sistema.
-dpkg –contents package.deb: mostrar lista de ficheros dados por un paquete no instalado todavía.
-dpkg -S /bin/ping: verificar cuál paquete pertenece a un fichero dado.
+dpkg -i package.deb: instalar / actualizar un paquete deb.<br>
+dpkg -r package_name: eliminar un paquete deb del sistema.<br>
+dpkg -l: mostrar todos los paquetes deb instalados en el sistema.<br>
+dpkg -l | grep httpd: mostrar todos los paquetes deb con el nombre “httpd”.<br>
+dpkg -s package_name: obtener información en un paquete específico instalado en el sistema.<br>
+dpkg -L package_name: mostar lista de ficheros dados por un paquete instalado en el sistema.<br>
+dpkg –contents package.deb: mostrar lista de ficheros dados por un paquete no instalado todavía.<br>
+dpkg -S /bin/ping: verificar cuál paquete pertenece a un fichero dado.<br>
 
 # Actualizador de paquetes APT (Debian, Ubuntu y derivados)
 
-apt-get install package_name: instalar / actualizar un paquete deb.
-apt-cdrom install package_name: instalar / actualizar un paquete deb desde un cdrom.
-apt-get update: actualizar la lista de paquetes.
-apt-get upgrade: actualizar todos los paquetes instalados.
-apt-get remove package_name: eliminar un paquete deb del sistema.
-apt-get check: verificar la correcta resolución de las dependencias.
-apt-get clean: limpiar cache desde los paquetes descargados.
-apt-cache search searched-package: retorna lista de paquetes que corresponde a la serie «paquetes buscados».
+apt-get install package_name: instalar / actualizar un paquete deb.<br>
+apt-cdrom install package_name: instalar / actualizar un paquete deb desde un cdrom.<br>
+apt-get update: actualizar la lista de paquetes.<br>
+apt-get upgrade: actualizar todos los paquetes instalados.<br>
+apt-get remove package_name: eliminar un paquete deb del sistema.<br>
+apt-get check: verificar la correcta resolución de las dependencias.<br>
+apt-get clean: limpiar cache desde los paquetes descargados.<br>
+apt-cache search searched-package: retorna lista de paquetes que corresponde a la serie «paquetes buscados».<br>
 
 #Ver el contenido de un fichero
 
-cat file1: ver los contenidos de un fichero comenzando desde la primera hilera.
-tac file1: ver los contenidos de un fichero comenzando desde la última línea.
-more file1: ver el contenido a lo largo de un fichero.
-less file1: parecido al commando ‘more’ pero permite salvar el movimiento en el fichero así como el movimiento hacia atrás.
-head -2 file1: ver las dos primeras líneas de un fichero.
-tail -2 file1: ver las dos últimas líneas de un fichero.
-tail -f /var/log/messages: ver en tiempo real qué ha sido añadido al fichero.
+cat file1: ver los contenidos de un fichero comenzando desde la primera hilera.<br>
+tac file1: ver los contenidos de un fichero comenzando desde la última línea.<br>
+more file1: ver el contenido a lo largo de un fichero.<br>
+less file1: parecido al commando ‘more’ pero permite salvar el movimiento en el fichero así como el movimiento hacia atrás.<br>
+head -2 file1: ver las dos primeras líneas de un fichero.<br>
+tail -2 file1: ver las dos últimas líneas de un fichero.<br>
+tail -f /var/log/messages: ver en tiempo real qué ha sido añadido al fichero.<br>
 
 #Manipulación de texto
 

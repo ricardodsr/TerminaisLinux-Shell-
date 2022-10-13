@@ -267,3 +267,66 @@ find /home/user1 -name ‘*.txt’ | xargs cp -av –target-directory=/home/back
 find /var/log -name ‘*.log’ | tar cv –files-from=- | bzip2 > log.tar.bz2: encontrar todos los ficheros con extensión ‘.log’ y hacer un archivo bzip.
 dd if=/dev/hda of=/dev/fd0 bs=512 count=1: hacer una copia del MRB (Master Boot Record) a un disco floppy.
 dd if=/dev/fd0 of=/dev/hda bs=512 count=1: restaurar la copia del MBR (Master Boot Record) salvada en un floppy.
+
+# Trabajo con la RED ( LAN y Wi-Fi)
+ifconfig eth0: mostrar la configuración de una tarjeta de red Ethernet.
+ifup eth0: activar una interface ‘eth0’.
+ifdown eth0: deshabilitar una interface ‘eth0’.
+ifconfig eth0 192.168.1.1 netmask 255.255.255.0: configurar una dirección IP.
+ifconfig eth0 promisc: configurar ‘eth0’en modo común para obtener los paquetes (sniffing).
+dhclient eth0: activar la interface ‘eth0’ en modo dhcp.
+route -n: mostrar mesa de recorrido.
+route add -net 0/0 gw IP_Gateway: configurar entrada predeterminada.
+route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1: configurar ruta estática para buscar la red ‘192.168.0.0/16’.
+route del 0/0 gw IP_gateway: eliminar la ruta estática.
+echo “1” > /proc/sys/net/ipv4/ip_forward: activar el recorrido ip.
+hostname: mostrar el nombre del host del sistema.
+host www.example.com: buscar el nombre del host para resolver el nombre a una dirección ip(1).
+nslookup www.example.com: buscar el nombre del host para resolver el nombre a una direccióm ip y viceversa(2).
+ip link show: mostar el estado de enlace de todas las interfaces.
+mii-tool eth0: mostar el estado de enlace de ‘eth0’.
+ethtool eth0: mostrar las estadísticas de tarjeta de red ‘eth0’.
+netstat -tup: mostrar todas las conexiones de red activas y sus PID.
+netstat -tupl: mostrar todos los servicios de escucha de red en el sistema y sus PID.
+tcpdump tcp port 80: mostrar todo el tráfico HTTP.
+iwlist scan: mostrar las redes inalámbricas.
+iwconfig eth1: mostrar la configuración de una tarjeta de red inalámbrica.
+whois www.example.com: buscar en base de datos Whois.
+
+# Redes de Microsoft Windows (SAMBA)
+nbtscan ip_addr: resolución de nombre de red bios.
+nmblookup -A ip_addr: resolución de nombre de red bios.
+smbclient -L ip_addr/hostname: mostrar acciones remotas de un host en windows.
+
+# Tablas IP (CORTAFUEGOS)
+iptables -t filter -L: mostrar todas las cadenas de la tabla de filtro.
+iptables -t nat -L: mostrar todas las cadenas de la tabla nat.
+iptables -t filter -F: limpiar todas las reglas de la tabla de filtro.
+iptables -t nat -F: limpiar todas las reglas de la tabla nat.
+iptables -t filter -X: borrar cualquier cadena creada por el usuario.
+iptables -t filter -A INPUT -p tcp –dport telnet -j ACCEPT: permitir las conexiones telnet para entar.
+iptables -t filter -A OUTPUT -p tcp –dport http -j DROP: bloquear las conexiones HTTP para salir.
+iptables -t filter -A FORWARD -p tcp –dport pop3 -j ACCEPT: permitir las conexiones POP a una cadena delantera.
+iptables -t filter -A INPUT -j LOG –log-prefix “DROP INPUT”: registrando una cadena de entrada.
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE: configurar un PAT (Puerto de traducción de dirección) en eth0, ocultando los paquetes de salida forzada.
+iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m tcp –dport 22 -j DNAT –to-destination 10.0.0.2:22: redireccionar los paquetes diriguidos de un host a otro.
+
+#Monitoreando y depurando
+top: mostrar las tareas de linux usando la mayoría cpu.
+ps -eafw: muestra las tareas Linux.
+ps -e -o pid,args –forest: muestra las tareas Linux en un modo jerárquico.
+pstree: mostrar un árbol sistema de procesos.
+kill -9 ID_Processo: forzar el cierre de un proceso y terminarlo.
+kill -1 ID_Processo: forzar un proceso para recargar la configuración.
+lsof -p $$: mostrar una lista de ficheros abiertos por procesos.
+lsof /home/user1: muestra una lista de ficheros abiertos en un camino dado del sistema.
+strace -c ls >/dev/null: mostrar las llamadas del sistema hechas y recibidas por un proceso.
+strace -f -e open ls >/dev/null: mostrar las llamadas a la biblioteca.
+watch -n1 ‘cat /proc/interrupts’: mostrar interrupciones en tiempo real.
+last reboot: mostrar historial de reinicio.
+lsmod: mostrar el kernel cargado.
+free -m: muestra el estado de la RAM en megabytes.
+smartctl -A /dev/hda: monitorear la fiabilidad de un disco duro a través de SMART.
+smartctl -i /dev/hda: chequear si SMART está activado en un disco duro.
+tail /var/log/dmesg: mostrar eventos inherentes al proceso de carga del kernel.
+tail /var/log/messages: mostrar los eventos del sistema.

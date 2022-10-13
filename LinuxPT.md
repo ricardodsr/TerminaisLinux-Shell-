@@ -21,7 +21,7 @@ cal 07 2011: mostrar o almanaque para o mes julio de 2021.<br>
 date 041217002011.00: colocar (declarar, ajustar) data e hora.<br>
 clock -w: guarda as modificações de data na bios.<br>
 
-# Apagar (Reiniciar Sistema o Cerrar Sesión)
+# Apagar (Reiniciar Sistema ou Fechar Seção)
 
 shutdown -h now: apagar o sistema (1).<br>
 init 0: apagar o sistema (2).<br>
@@ -31,43 +31,41 @@ shutdown -h hours:minutes &: apagar de modo planificado o sistema.<br>
 shutdown -c: cancelar o shutdown planificado do sistema.<br>
 shutdown -r now: reiniciar (1).<br>
 reboot: reiniciar (2).<br>
-logout: fechar a secção.<br>
+logout: fechar a seção.<br>
 
-# Archivos y Directorios
+# Arquivos y Diretórios
 
-cd /home: entrar en el directorio “home”.<br>
-cd ..: retroceder un nivel.<br>
-cd ../..: retroceder 2 niveles.<br>
-cd: ir al directorio raíz.<br>
-cd ~user1: ir al directorio user1.<br>
-cd –: ir (regresar) al directorio anterior.<br>
-pwd: mostrar el camino del directorio de trabajo.<br>
-ls: ver los ficheros de un directorio.<br>
-ls -F: ver los ficheros de un directorio.<br>
-ls -l: mostrar los detalles de ficheros y carpetas de un directorio.<br>
-ls -a: mostrar los ficheros ocultos.<br>
-ls *[0-9]*: mostrar los ficheros y carpetas que contienen números.<br>
-tree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.<br>
-lstree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.<br>
-mkdir dir1: crear una carpeta o directorio con nombre ‘dir1’.<br>
-mkdir dir1 dir2: crear dos carpetas o directorios simultáneamente (Crear dos directorios a la vez).<br>
-mkdir -p /tmp/dir1/dir2: crear un árbol de directorios.<br>
-rm -f file1: borrar el fichero llamado ‘file1’.<br>
-rmdir dir1: borrar la carpeta llamada ‘dir1’.<br>
-rm -rf dir1: eliminar una carpeta llamada ‘dir1’ con su contenido de forma recursiva. (Si lo borro recursivo estoy diciendo que es con su contenido).<br>
-rm -rf dir1 dir2: borrar dos carpetas (directorios) con su contenido de forma recursiva.<br>
-mv dir1 new_dir: renombrar o mover un fichero o carpeta (directorio).<br>
-cp file1: copiar un fichero.<br>
-cp file1 file2: copiar dos ficheros al unísono.<br>
-cp dir /* .: copiar todos los ficheros de un directorio dentro del directorio de trabajo actual.<br>
-cp -a /tmp/dir1 .: copiar un directorio dentro del directorio actual de trabajo.<br>
-cp -a dir1: copiar un directorio.<br>
-cp -a dir1 dir2: copiar dos directorio al unísono.<br>
-ln -s file1 lnk1: crear un enlace simbólico al fichero o directorio.<br>
-ln file1 lnk1: crear un enlace físico al fichero o directorio.<br>
-touch -t 0712250000 file1: modificar el tiempo real (tiempo de creación) de un fichero o directorio.<br>
-file file1: salida (volcado en pantalla) del tipo mime de un fichero texto.<br>
-iconv -l: listas de cifrados conocidos.<br>
-iconv -f fromEncoding -t toEncoding inputFile > outputFile: crea una nueva forma del fichero de entrada asumiendo que está codificado en fromEncoding y convirtiéndolo a ToEncoding.<br>
-find . -maxdepth 1 -name *.jpg -print -exec convert ”{}” -resize 80×60 “thumbs/{}” \;: agrupar ficheros redimensionados en el directorio actual y enviarlos a directorios en vistas de miniaturas (requiere convertir desde ImagemagicK).<br>
+cd /home: entrar no diretório “home”.<br>
+cd ..: voltar um nivel.<br>
+cd ../..: voltar 2 niveis.<br>
+cd: ir para o diretório root(raiz).<br>
+cd ~user1: ir para o diretório user1.<br>
+cd –: voltar ao diretório anterior.<br>
+pwd: mostrar o camino do directorio de trabalho.<br>
+ls: mostar ficheiros do directorio atual.<br>
+ls -F:mostar ficheiros do directorio atual.<br>
+ls -l: mostar ficheiros e pastas do directorio atual.<br>
+ls -a: mostrar ficheiros ocultos.<br>
+ls *[0-9]*: mostrar os ficheiros y pastas que contem números.<br>
+tree: mostrar ficheros e pastas em forma de arvore.<br>
+lstree:mostrar ficheros e pastas em forma de arvore.<br>
+mkdir dir1:  criar uma pasta do diretório com nome dir1.<br>
+mkdir dir1 dir2: criar duas pastas ou diretorios simultaneamente.<br>
+mkdir -p /tmp/dir1/dir2: criar uma arvore de diretórios.<br>
+rm -f file1: apagar o ficheiro ‘file1’.<br>
+rmdir dir1: apagar a pasta ‘dir1’.<br>
+rm -rf dir1: eliminar uma pasta e todo o ser conteudo de forma recursiva ‘dir1’.<br>
+rm -rf dir1 dir2: eliminar duas pastas e todos os seus conteudos de forma recursiva ‘dir1’ ‘dir2’.<br>
+mv dir1 new_dir: renomear ou mver um ficheiro ou pasta par outro directorio.<br>
+cp file1: copiar um fichero.<br>
+cp file1 file2: copiar dois ficheros ao mesmo tempo.<br>
+cp dir /* .: copiar todos os ficheiros de um diretorio dentro do diretório de trabalho actual.<br>
+cp -a /tmp/dir1 .: copiar um diretorio dentro do diretorio atual de trabalho.<br>
+cp -a dir1: copiar un diretorio.<br>
+cp -a dir1 dir2: copiar dois diretorios ao mesmo tempo.<br>
+ln -s file1 lnk1: criar um link simbólico para o ficheiro ou diretorio.<br>
+ln file1 lnk1: criar um link fisico para o ficheiro ou diretorio.<br>
+touch -t 0712250000 file1: modificar o tempo real (decriação) de um ficheiro ou diretorio.<br>
+iconv -l: listas de crifras conhecidas.<br>
+
 

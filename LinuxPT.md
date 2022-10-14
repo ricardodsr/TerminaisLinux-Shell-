@@ -70,12 +70,12 @@ iconv -l: listas de crifras conhecidas.<br>
 
 
 # Procurar arquivos
-find / -name file1: procurar ficheiro ou diretório a partir da raiz.
-find / -user user1: procurar ficheiro ou diretório pertencentes a um utilizador.
-find /home/user1 -name *.bin: procurar ficheiros com extensão‘. bin’ dentro do diretório ‘/ home/user1’.
-find /usr/bin -type f -atime +100:  procurar ficheiros binarios não usados nos ultimos 100 dias.
-find /usr/bin -type f -mtime -10: procura ficheiros criados ou modificados nos ultimos 10 dias.
-find / -name *.rpm -exec chmod 755 ‘{}’ ;: procurar ficheiros com extensão ‘.rpm’ e modificar suas permissões.
-find / -xdev -name *.rpm: Procurar ficheiros com extensão ‘.rpm’ ignorando os dispositivos removiveis.
-whereis halt: mostrar a localização de um ficheiro binario de ajuda ou fonte. neste caso o comando ‘halt’.
-which halt: mostar o caminho completo para o binario executavel / .
+find / -name file1: procurar ficheiro ou diretório a partir da raiz.<br>
+find / -user user1: procurar ficheiro ou diretório pertencentes a um utilizador.<br>
+find /home/user1 -name *.bin: procurar ficheiros com extensão‘. bin’ dentro do diretório ‘/ home/user1’.<br>
+find /usr/bin -type f -atime +100:  procurar ficheiros binarios não usados nos ultimos 100 dias.<br>
+find /usr/bin -type f -mtime -10: procura ficheiros criados ou modificados nos ultimos 10 dias.<br>
+find / -name *.rpm -exec chmod 755 ‘{}’ ;: procurar ficheiros com extensão ‘.rpm’ e modificar suas permissões.<br>
+find / -xdev -name *.rpm: Procurar ficheiros com extensão ‘.rpm’ ignorando os dispositivos removiveis.<br>
+whereis halt: mostrar a localização de um ficheiro binario de ajuda ou fonte. neste caso o comando ‘halt’.<br>
+which halt: mostar o caminho completo para o binario executavel / .<br>

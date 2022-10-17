@@ -79,3 +79,20 @@ find / -name *.rpm -exec chmod 755 ‘{}’ ;: procurar ficheiros com extensão 
 find / -xdev -name *.rpm: Procurar ficheiros com extensão ‘.rpm’ ignorando os dispositivos removiveis.<br>
 whereis halt: mostrar a localização de um ficheiro binario de ajuda ou fonte. neste caso o comando ‘halt’.<br>
 which halt: mostar o caminho completo para o binario executavel / .<br>
+
+# Sistema de fichetros
+mount /dev/hda2 /mnt/hda2: montar o disco com label hda2.<br>
+umount /dev/hda2: desmontar o disco com label hda2.<br>
+fuser -km /mnt/hda2: forçar o desmontar do dispositivo montado (hda2).<br>
+umount -n /mnt/hda2: descomtar sem ler o mtab.<br>
+mount /dev/fd0 /mnt/floppy: montar uma disquete (floppy).<br>
+mount /dev/cdrom /mnt/cdrom: montar um cdrom / dvdrom.<br>
+mount -o loop file.iso /mnt/cdrom: montar um ficheiro ou uma imagem iso.<br>
+mount -t vfat /dev/hda5 /mnt/hda5: montar um sistema de ficheiros FAT32.<br>
+mount /dev/sda1 /mnt/usbdisk: montar uma usb pen-drive ou uma memoria.<br>
+
+# Espaço de Disco
+df -h: mostrar lista de partições montadas.<br>
+ls -lSr |more: mostrar o tamanha dos ficheiros e diretórios ordenados por tamanho.<br>
+du -sh dir1:  Fazer estimativa do espaço usado pelo diretório ‘dir1’.<br>
+du -sk * | sort -rn: mostar o tamanho dos ficheiros e diretórios ordenados por tamanho.<br>

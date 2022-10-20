@@ -1,3 +1,22 @@
+# Comandos Globais
+
+Ctrl+C -> Cancela o comando atual em funcionamento.<br>
+
+Ctrl+Z -> Pausa o comando atual, retorna com "fg" em primeiro plano Linux ou "bg" em segundo plano.<br>
+
+Ctrl+D -> Faz o logout da sessão atual.<br>
+
+Ctrl+W -> Apaga uma palavra na linha atual.<br>
+
+Ctrl+U -> Apaga a linha inteira.<br>
+
+Ctrl+R -> Tecle para Exiber um comando recente.<br>
+
+!! -> Repete o último comando.<br>
+
+exit -> Faz o logout da sessão atual.<br>
+
+
 # Informações de sistema
 
 arch: mostrar a arquitectura da máquina.<br>

@@ -115,3 +115,35 @@ df -h: mostrar lista de partições montadas.<br>
 ls -lSr |more: mostrar o tamanha dos ficheiros e diretórios ordenados por tamanho.<br>
 du -sh dir1:  Fazer estimativa do espaço usado pelo diretório ‘dir1’.<br>
 du -sk * | sort -rn: mostar o tamanho dos ficheiros e diretórios ordenados por tamanho.<br>
+
+
+# Usuarios e Grupos
+
+groupadd nome_do_grupo: criar um grupo novo.<br>
+groupdel nome_do_grupo: apagar um grupo.<br>
+groupmod -n novo_nome_do_grupo velho_nome_do_grupo: renomear o grupo.<br>
+useradd -c “Name Surname ” -g admin -d /home/user1 -s /bin/bash user1: cria um novo utilizador no grupo admin.<br>
+useradd user1: criar um novo utilizador.<br>
+userdel -r user1: apaga o utilizador (‘-r’ elimina  diretorio Home).<br>
+usermod -c “User FTP” -g system -d /ftp/user1 -s /bin/nologin user1: modifica os atributos do utilizador.<br>
+passwd: muda a password.<br>
+passwd user1: modifica a password de um utilizador.<br><br>
+chage -E 2011-12-31 user1: adiciona uma data limite para a password do utilizador. exemplo, acaba em 2011-12-31 <br>
+
+# Permisões em Ficheiros (Usar ”+” para colocar permissoes e ”-” para eliminar)
+
+ls -lh: mostrar permissoes.<br>
+ls /tmp | pr -T5 -W$COLUMNS: dividir o terminal em 5 colunas.<br>
+chmod ugo+rwx directory1: adicionar permissoes de leitura, escrita (w) y execução (x) ao proprietario (u), grupo (g) e otros (o) para o diretorio ‘directory1’.<br>
+chmod go-rwx directory1: retira permissoes de leitura, escrita (w) y execução (x) ao proprietario (u), grupo (g) e otros (o) para o diretorio ‘directory1’.<br>
+chown user1 file1: modifica o proprietario do ficheiro.<br>
+chown -R user1 directory1: modificar o proprietario de uma pasta de forma recursiva<br>
+chgrp group1 file1: modificacr grupo de ficheiros.<br>
+chown user1:group1 file1: modificar o utilizador e grupo de um determinado ficheiro.<br>
+
+find / -perm -u+s: visualizar todos os ficheiros do sistema com SUID configurado.<br>
+chmod u+s /bin/file1: colocar o bit SUID num ficheiro binario.<br>
+chmod u-s /bin/file1: desativar o bit SUID de um ficheiro binario.<br>
+chmod g+s /home/public: adicionar o bit SGID num diretorio.<br>
+chmod g-s /home/public: desativar o bit SGID num diretorio.<br>
+

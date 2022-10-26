@@ -26,126 +26,126 @@
       hdparm -i /dev/hda: mostrar as características de um disco rigido.
       hdparm -tT /dev/sda: Fazer testes de leitura em um disco rigido.
       cat /proc/cpuinfo: mostrar informacão do CPU.
-      cat /proc/interrupts: mostrar as interrupções.<br>
-      cat /proc/meminfo: verificar o uso da memória.<br>
-      cat /proc/swaps: mostrar ficheros swap.<br>
-      cat /proc/version: mostrar a versão do kernel.<br>
-      cat /proc/net/dev: mostrar adaptadores de rede e estatísticas.<br>
-      cat /proc/mounts: mostrar o sistema de ficheros montado.<br>
-      lspci -tv: mostrar dispositivos PCI.<br>
-      lsusb -tv: mostrar dispositivos USB.<br>
-      date: mostrar la fecha del sistema.<br>
-      cal 2021: mostrar o almanaque de 2021.<br>
-      cal 07 2011: mostrar o almanaque para o mes julio de 2021.<br>
-      date 041217002011.00: colocar (declarar, ajustar) data e hora.<br>
-      clock -w: guarda as modificações de data na bios.<br>
+      cat /proc/interrupts: mostrar as interrupções.
+      cat /proc/meminfo: verificar o uso da memória.
+      cat /proc/swaps: mostrar ficheros swap.
+      cat /proc/version: mostrar a versão do kernel.
+      cat /proc/net/dev: mostrar adaptadores de rede e estatísticas.
+      cat /proc/mounts: mostrar o sistema de ficheros montado.
+      lspci -tv: mostrar dispositivos PCI.
+      lsusb -tv: mostrar dispositivos USB.
+      date: mostrar la fecha del sistema.
+      cal 2021: mostrar o almanaque de 2021.
+      cal 07 2011: mostrar o almanaque para o mes julio de 2021.
+      date 041217002011.00: colocar (declarar, ajustar) data e hora.
+      clock -w: guarda as modificações de data na bios.
 
 # Apagar (Reiniciar Sistema ou Fechar Seção)
 
-      shutdown -h now: apagar o sistema (1).<br>
-      init 0: apagar o sistema (2).<br>
-      telinit 0: apagar o sistema (3).<br>
-      halt: apagar o sistema (4).<br>
-      shutdown -h hours:minutes &: apagar de modo planificado o sistema.<br>
-      shutdown -c: cancelar o shutdown planificado do sistema.<br>
-      shutdown -r now: reiniciar (1).<br>
-      reboot: reiniciar (2).<br>
-      logout: fechar a seção.<br>
+      shutdown -h now: apagar o sistema (1).
+      init 0: apagar o sistema (2).
+      telinit 0: apagar o sistema (3).
+      halt: apagar o sistema (4).
+      shutdown -h hours:minutes &: apagar de modo planificado o sistema.
+      shutdown -c: cancelar o shutdown planificado do sistema.
+      shutdown -r now: reiniciar (1).
+      reboot: reiniciar (2).
+      logout: fechar a seção.
 
 # Arquivos y Diretórios
 
-      cd /home: entrar no diretório “home”.<br>
-      cd ..: voltar um nivel.<br>
-      cd ../..: voltar 2 niveis.<br>
-      cd: ir para o diretório root(raiz).<br>
-      cd ~user1: ir para o diretório user1.<br>
-      cd –: voltar ao diretório anterior.<br>
-      pwd: mostrar o camino do directorio de trabalho.<br>
-      ls: mostar ficheiros do directorio atual.<br>
-      ls -F:mostar ficheiros do directorio atual.<br>
-      ls -l: mostar ficheiros e pastas do directorio atual.<br>
-      ls -a: mostrar ficheiros ocultos.<br>
-      ls *[0-9]*: mostrar os ficheiros y pastas que contem números.<br>
-      tree: mostrar ficheros e pastas em forma de arvore.<br>
-      lstree:mostrar ficheros e pastas em forma de arvore.<br>
-      mkdir dir1:  criar uma pasta do diretório com nome dir1.<br>
-      mkdir dir1 dir2: criar duas pastas ou diretorios simultaneamente.<br>
-      mkdir -p /tmp/dir1/dir2: criar uma arvore de diretórios.<br>
-      rm -f file1: apagar o ficheiro ‘file1’.<br>
-      rmdir dir1: apagar a pasta ‘dir1’.<br>
-      rm -rf dir1: eliminar uma pasta e todo o ser conteudo de forma recursiva ‘dir1’.<br>
-      rm -rf dir1 dir2: eliminar duas pastas e todos os seus conteudos de forma recursiva ‘dir1’ ‘dir2’.<br>
-      mv dir1 new_dir: renomear ou mver um ficheiro ou pasta par outro directorio.<br>
-      cp file1: copiar um fichero.<br>
-      cp file1 file2: copiar dois ficheros ao mesmo tempo.<br>
-      cp dir /* .: copiar todos os ficheiros de um diretorio dentro do diretório de trabalho actual.<br>
-      cp -a /tmp/dir1 .: copiar um diretorio dentro do diretorio atual de trabalho.<br>
-      cp -a dir1: copiar un diretorio.<br>
-      cp -a dir1 dir2: copiar dois diretorios ao mesmo tempo.<br>
-      ln -s file1 lnk1: criar um link simbólico para o ficheiro ou diretorio.<br>
-      ln file1 lnk1: criar um link fisico para o ficheiro ou diretorio.<br>
-      touch -t 0712250000 file1: modificar o tempo real (decriação) de um ficheiro ou diretorio.<br>
-      iconv -l: listas de crifras conhecidas.<br>
+      cd /home: entrar no diretório “home”.
+      cd ..: voltar um nivel.
+      cd ../..: voltar 2 niveis.
+      cd: ir para o diretório root(raiz).
+      cd ~user1: ir para o diretório user1.
+      cd –: voltar ao diretório anterior.
+      pwd: mostrar o camino do directorio de trabalho.
+      ls: mostar ficheiros do directorio atual.
+      ls -F:mostar ficheiros do directorio atual.
+      ls -l: mostar ficheiros e pastas do directorio atual.
+      ls -a: mostrar ficheiros ocultos.
+      ls *[0-9]*: mostrar os ficheiros y pastas que contem números.
+      tree: mostrar ficheros e pastas em forma de arvore.
+      lstree:mostrar ficheros e pastas em forma de arvore.
+      mkdir dir1:  criar uma pasta do diretório com nome dir1.
+      mkdir dir1 dir2: criar duas pastas ou diretorios simultaneamente.
+      mkdir -p /tmp/dir1/dir2: criar uma arvore de diretórios.
+      rm -f file1: apagar o ficheiro ‘file1’.
+      rmdir dir1: apagar a pasta ‘dir1’.
+      rm -rf dir1: eliminar uma pasta e todo o ser conteudo de forma recursiva ‘dir1’.
+      rm -rf dir1 dir2: eliminar duas pastas e todos os seus conteudos de forma recursiva ‘dir1’ ‘dir2’.
+      mv dir1 new_dir: renomear ou mver um ficheiro ou pasta par outro directorio.
+      cp file1: copiar um fichero.
+      cp file1 file2: copiar dois ficheros ao mesmo tempo.
+      cp dir /* .: copiar todos os ficheiros de um diretorio dentro do diretório de trabalho actual.
+      cp -a /tmp/dir1 .: copiar um diretorio dentro do diretorio atual de trabalho.
+      cp -a dir1: copiar un diretorio.
+      cp -a dir1 dir2: copiar dois diretorios ao mesmo tempo.
+      ln -s file1 lnk1: criar um link simbólico para o ficheiro ou diretorio.
+      ln file1 lnk1: criar um link fisico para o ficheiro ou diretorio.
+      touch -t 0712250000 file1: modificar o tempo real (decriação) de um ficheiro ou diretorio.
+      iconv -l: listas de crifras conhecidas.
 
 
 # Procurar arquivos
 
-      find / -name file1: procurar ficheiro ou diretório a partir da raiz.<br>
-      find / -user user1: procurar ficheiro ou diretório pertencentes a um utilizador.<br>
-      find /home/user1 -name *.bin: procurar ficheiros com extensão‘. bin’ dentro do diretório ‘/ home/user1’.<br>
-      find /usr/bin -type f -atime +100:  procurar ficheiros binarios não usados nos ultimos 100 dias.<br>
-      find /usr/bin -type f -mtime -10: procura ficheiros criados ou modificados nos ultimos 10 dias.<br>
-      find / -name *.rpm -exec chmod 755 ‘{}’ ;: procurar ficheiros com extensão ‘.rpm’ e modificar suas permissões.<br>
-      find / -xdev -name *.rpm: Procurar ficheiros com extensão ‘.rpm’ ignorando os dispositivos removiveis.<br>
-      whereis halt: mostrar a localização de um ficheiro binario de ajuda ou fonte. neste caso o comando ‘halt’.<br>
-      which halt: mostar o caminho completo para o binario executavel / .<br>
+      find / -name file1: procurar ficheiro ou diretório a partir da raiz.
+      find / -user user1: procurar ficheiro ou diretório pertencentes a um utilizador.
+      find /home/user1 -name *.bin: procurar ficheiros com extensão‘. bin’ dentro do diretório ‘/ home/user1’.
+      find /usr/bin -type f -atime +100:  procurar ficheiros binarios não usados nos ultimos 100 dias.
+      find /usr/bin -type f -mtime -10: procura ficheiros criados ou modificados nos ultimos 10 dias.
+      find / -name *.rpm -exec chmod 755 ‘{}’ ;: procurar ficheiros com extensão ‘.rpm’ e modificar suas permissões.
+      find / -xdev -name *.rpm: Procurar ficheiros com extensão ‘.rpm’ ignorando os dispositivos removiveis.
+      whereis halt: mostrar a localização de um ficheiro binario de ajuda ou fonte. neste caso o comando ‘halt’.
+      which halt: mostar o caminho completo para o binario executavel / .
 
       # Sistema de fichetros
-      mount /dev/hda2 /mnt/hda2: montar o disco com label hda2.<br>
-      umount /dev/hda2: desmontar o disco com label hda2.<br>
-      fuser -km /mnt/hda2: forçar o desmontar do dispositivo montado (hda2).<br>
-      umount -n /mnt/hda2: descomtar sem ler o mtab.<br>
-      mount /dev/fd0 /mnt/floppy: montar uma disquete (floppy).<br>
-      mount /dev/cdrom /mnt/cdrom: montar um cdrom / dvdrom.<br>
-      mount -o loop file.iso /mnt/cdrom: montar um ficheiro ou uma imagem iso.<br>
-      mount -t vfat /dev/hda5 /mnt/hda5: montar um sistema de ficheiros FAT32.<br>
-      mount /dev/sda1 /mnt/usbdisk: montar uma usb pen-drive ou uma memoria.<br>
+      mount /dev/hda2 /mnt/hda2: montar o disco com label hda2.
+      umount /dev/hda2: desmontar o disco com label hda2.
+      fuser -km /mnt/hda2: forçar o desmontar do dispositivo montado (hda2).
+      umount -n /mnt/hda2: descomtar sem ler o mtab.
+      mount /dev/fd0 /mnt/floppy: montar uma disquete (floppy).
+      mount /dev/cdrom /mnt/cdrom: montar um cdrom / dvdrom.
+      mount -o loop file.iso /mnt/cdrom: montar um ficheiro ou uma imagem iso.
+      mount -t vfat /dev/hda5 /mnt/hda5: montar um sistema de ficheiros FAT32.
+      mount /dev/sda1 /mnt/usbdisk: montar uma usb pen-drive ou uma memoria.
 
 # Espaço de Disco
 
-      df -h: mostrar lista de partições montadas.<br>
-      ls -lSr |more: mostrar o tamanha dos ficheiros e diretórios ordenados por tamanho.<br>
-      du -sh dir1:  Fazer estimativa do espaço usado pelo diretório ‘dir1’.<br>
-      du -sk * | sort -rn: mostar o tamanho dos ficheiros e diretórios ordenados por tamanho.<br>
+      df -h: mostrar lista de partições montadas.
+      ls -lSr |more: mostrar o tamanha dos ficheiros e diretórios ordenados por tamanho.
+      du -sh dir1:  Fazer estimativa do espaço usado pelo diretório ‘dir1’.
+      du -sk * | sort -rn: mostar o tamanho dos ficheiros e diretórios ordenados por tamanho.
 
 
 # Usuarios e Grupos
 
-      groupadd nome_do_grupo: criar um grupo novo.<br>
-      groupdel nome_do_grupo: apagar um grupo.<br>
-      groupmod -n novo_nome_do_grupo velho_nome_do_grupo: renomear o grupo.<br>
-      useradd -c “Name Surname ” -g admin -d /home/user1 -s /bin/bash user1: cria um novo utilizador no grupo admin.<br>
-      useradd user1: criar um novo utilizador.<br>
-      userdel -r user1: apaga o utilizador (‘-r’ elimina  diretorio Home).<br>
-      usermod -c “User FTP” -g system -d /ftp/user1 -s /bin/nologin user1: modifica os atributos do utilizador.<br>
-      passwd: muda a password.<br>
-      passwd user1: modifica a password de um utilizador.<br><br>
-      chage -E 2011-12-31 user1: adiciona uma data limite para a password do utilizador. exemplo, acaba em 2011-12-31 <br>
+      groupadd nome_do_grupo: criar um grupo novo.
+      groupdel nome_do_grupo: apagar um grupo.
+      groupmod -n novo_nome_do_grupo velho_nome_do_grupo: renomear o grupo.
+      useradd -c “Name Surname ” -g admin -d /home/user1 -s /bin/bash user1: cria um novo utilizador no grupo admin.
+      useradd user1: criar um novo utilizador.
+      userdel -r user1: apaga o utilizador (‘-r’ elimina  diretorio Home).
+      usermod -c “User FTP” -g system -d /ftp/user1 -s /bin/nologin user1: modifica os atributos do utilizador.
+      passwd: muda a password.
+      passwd user1: modifica a password de um utilizador.
+      chage -E 2011-12-31 user1: adiciona uma data limite para a password do utilizador. exemplo, acaba em 2011-12-31 
 
 # Permisões em Ficheiros (Usar ”+” para colocar permissoes e ”-” para eliminar)
 
-      ls -lh: mostrar permissoes.<br>
-      ls /tmp | pr -T5 -W$COLUMNS: dividir o terminal em 5 colunas.<br>
-      chmod ugo+rwx directory1: adicionar permissoes de leitura, escrita (w) y execução (x) ao proprietario (u), grupo (g) e otros (o) para o diretorio ‘directory1’.<br>
-      chmod go-rwx directory1: retira permissoes de leitura, escrita (w) y execução (x) ao proprietario (u), grupo (g) e otros (o) para o diretorio ‘directory1’.<br>
-      chown user1 file1: modifica o proprietario do ficheiro.<br>
-      chown -R user1 directory1: modificar o proprietario de uma pasta de forma recursiva<br>
-      chgrp group1 file1: modificacr grupo de ficheiros.<br>
-      chown user1:group1 file1: modificar o utilizador e grupo de um determinado ficheiro.<br>
+      ls -lh: mostrar permissoes.
+      ls /tmp | pr -T5 -W$COLUMNS: dividir o terminal em 5 colunas.
+      chmod ugo+rwx directory1: adicionar permissoes de leitura, escrita (w) y execução (x) ao proprietario (u), grupo (g) e otros (o) para o diretorio ‘directory1’.
+      chmod go-rwx directory1: retira permissoes de leitura, escrita (w) y execução (x) ao proprietario (u), grupo (g) e otros (o) para o diretorio ‘directory1’.
+      chown user1 file1: modifica o proprietario do ficheiro.
+      chown -R user1 directory1: modificar o proprietario de uma pasta de forma recursiva
+      chgrp group1 file1: modificacr grupo de ficheiros.
+      chown user1:group1 file1: modificar o utilizador e grupo de um determinado ficheiro.
 
-      find / -perm -u+s: visualizar todos os ficheiros do sistema com SUID configurado.<br>
-      chmod u+s /bin/file1: colocar o bit SUID num ficheiro binario.<br>
-      chmod u-s /bin/file1: desativar o bit SUID de um ficheiro binario.<br>
-      chmod g+s /home/public: adicionar o bit SGID num diretorio.<br>
-      chmod g-s /home/public: desativar o bit SGID num diretorio.<br>
+      find / -perm -u+s: visualizar todos os ficheiros do sistema com SUID configurado.
+      chmod u+s /bin/file1: colocar o bit SUID num ficheiro binario.
+      chmod u-s /bin/file1: desativar o bit SUID de um ficheiro binario.
+      chmod g+s /home/public: adicionar o bit SGID num diretorio.
+      chmod g-s /home/public: desativar o bit SGID num diretorio.
 

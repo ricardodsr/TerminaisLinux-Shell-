@@ -1,31 +1,31 @@
 # Comandos Globais
 
-      Ctrl+C -> Cancela o comando atual em funcionamento.<br>
+      Ctrl+C -> Cancela o comando atual em funcionamento.
 
-      Ctrl+Z -> Pausa o comando atual, retorna com "fg" em primeiro plano Linux ou "bg" em segundo plano.<br>
+      Ctrl+Z -> Pausa o comando atual, retorna com "fg" em primeiro plano Linux ou "bg" em segundo plano.
+      
+      Ctrl+D -> Faz o logout da sessão atual.
 
-      Ctrl+D -> Faz o logout da sessão atual.<br>
+      Ctrl+W -> Apaga uma palavra na linha atual.
 
-      Ctrl+W -> Apaga uma palavra na linha atual.<br>
+      Ctrl+U -> Apaga a linha inteira.
 
-      Ctrl+U -> Apaga a linha inteira.<br>
+      Ctrl+R -> Tecle para Exiber um comando recente.
+      
+      !! -> Repete o último comando.
 
-      Ctrl+R -> Tecle para Exiber um comando recente.<br>
-
-      !! -> Repete o último comando.<br>
-
-      exit -> Faz o logout da sessão atual.<br>
+      exit -> Faz o logout da sessão atual.
 
 
 # Informações de sistema
 
-      arch: mostrar a arquitectura da máquina.<br>
-      uname -m: mostrar a arquitectura da máquina .<br>
-      uname -r: mostrar versão do kernel usado.<br>
-      dmidecode -q: mostrar o hardware do sistema.<br>
-      hdparm -i /dev/hda: mostrar as características de um disco rigido.<br>
-      hdparm -tT /dev/sda: Fazer testes de leitura em um disco rigido.<br>
-      cat /proc/cpuinfo: mostrar informacão do CPU.<br>
+      arch: mostrar a arquitectura da máquina.
+      uname -m: mostrar a arquitectura da máquina .
+      uname -r: mostrar versão do kernel usado.
+      dmidecode -q: mostrar o hardware do sistema.
+      hdparm -i /dev/hda: mostrar as características de um disco rigido.
+      hdparm -tT /dev/sda: Fazer testes de leitura em um disco rigido.
+      cat /proc/cpuinfo: mostrar informacão do CPU.
       cat /proc/interrupts: mostrar as interrupções.<br>
       cat /proc/meminfo: verificar o uso da memória.<br>
       cat /proc/swaps: mostrar ficheros swap.<br>

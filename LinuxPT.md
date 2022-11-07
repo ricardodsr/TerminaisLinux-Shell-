@@ -1,3 +1,46 @@
+# Diretórios (Debian)
+
+      / - Diretório root
+
+      /bin - importante aplicativos binários
+
+      /boot - arquivos de configuração do boot , kernels, e outros arquivos necessários durante o período do boot.
+
+      /dev - os arquivos do dispositivo
+
+      /etc - arquivos de configuração, scripts de inicialização, etc.
+
+      /home - diretórios home para diferentes usuários
+
+      /initrd - usado quando está criando um processo de boot initrd personalizado
+
+      /lib - bibliotecas de sistema
+
+      /lost+found - fornece um sistema perdido+achado para arquivos que existem sob o diretório root (/).
+
+      /media - monta ( carrega ) automaticamente partições em seu disco rigido ou mídia removivel como CDs, câmeras digitais, etc.
+
+      /mnt - sistema de arquivos montado manualmente em seu disco rigido.
+
+      /opt - fornece um local opcional para aplica
+
+      /proc - diretório dinâmico especial que mantem informação sobre o estado do sistema, incluindo os processos atualmente executados.
+
+      /root - diretório home do usuário root, pronuciado "eslash-ruut"
+
+      /sbin - binários de sistema importantes.
+
+      /srv - pode conter arquivos que são servidos para outros sistemas
+
+      /sys - arquivos de sistema
+
+      /tmp - arquivos temporários
+
+      /usr - aplicativos e arquivos que são na maioria das vezes disponíveis ao acesso de todos usuários
+
+      /var - arquivos variáveis tal como logs e bancos de dados
+
+
 # Comandos Globais
 
       Ctrl+C -> Cancela o comando atual em funcionamento.

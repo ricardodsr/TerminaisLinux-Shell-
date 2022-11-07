@@ -203,7 +203,7 @@
       chattr +u file1: permite recuperar o conteudo de um ficheiro, mesmo que este esteja cancelado.
       lsattr: mostrar atibutos especiais.
 
-# Archivos y Ficheros comprimidos
+# Arquivose Ficheiros compactados
 
       bunzip2 file1.bz2: descompacta o ficheiro chamado "file1.bz2".
       bzip2 file1: compacta um ficheiro com o nome "file1".

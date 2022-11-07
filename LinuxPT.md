@@ -149,3 +149,37 @@
       chmod g+s /home/public: adicionar o bit SGID num diretorio.
       chmod g-s /home/public: desativar o bit SGID num diretorio.
 
+ # Atributos especiais em ficheiros
+
+      chattr +a file1: permite escrever abrindo um ficheiro somente em modo append.
+      chattr +c file1: permite que um ficheiro seja compactado/descompactado automaticamente.
+      chattr +d file1: assegura que o programa ignore apagar os ficheiros durante a copia de segurança.
+      chattr +i file1: converte o ficheiro em inariavel, pelo que nao pode ser eliminado, alterado,renomeado.
+      chattr +s file1: permite que um ficheiro seja apagado de forma segura.
+      chattr +S file1: assegura que um ficheiro seja modificado, as modificações são escritas em mode synchronous.
+      chattr +u file1: permite recuperar o conteudo de um ficheiro, mesmo que este esteja cancelado.
+      lsattr: mostrar atibutos especiais.
+
+# Archivos y Ficheros comprimidos
+
+      bunzip2 file1.bz2: descompacta o ficheiro chamado "file1.bz2".
+      bzip2 file1: compacta um ficheiro com o nome "file1".
+      gunzip file1.gz: descompacta um ficheiro chamado "file1.gz".
+      gzip file1: compacta um ficheiro chamado "file1".
+      gzip -9 file1: compacta com compressão maxima.
+      rar a file1.rar test_file: cria um ficheiro rar chamado "file1.rar".
+      rar a file1.rar file1 file2 dir1: compacta "file1", "file2" e "dir1" simultaneamente.
+      rar x file1.rar: descompactar o arquivo rar.
+      unrar x file1.rar: descompactar o arquivo rar.
+      tar -cvf archive.tar file1: criar um tarball descompactado.
+      tar -cvf archive.tar file1 file2 dir1: cria um arquivo contendo "file1","file2" e "dir1".
+      tar -tf archive.tar: mostra os conteudos de um arquivo.
+      tar -xvf archive.tar: extrair um tarball.
+      tar -xvf archive.tar -C /tmp: extrair uma tarball no /tmp.
+      tar -cvfj archive.tar.bz2 dir1: criar um tarball compactado dentro de bzip2.
+      tar -xvfj archive.tar.bz2: descompactar um arquivo tar compactado em bzip2.
+      tar -cvfz archive.tar.gz dir1: criar um tarball compactado em gzip.
+      tar -xvfz archive.tar.gz:descompactar um arquivo tar compactado em gzip.
+      zip file1.zip file1: criar um arquivo compactado em zip.
+      zip -r file1.zip file1 file2 dir1:compactar, em zip, varos arquivos e diretorios de forma simultanea.
+      unzip file1.zip: descompactar um arquivo zip.

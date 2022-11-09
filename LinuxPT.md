@@ -143,7 +143,7 @@
       whereis halt: mostrar a localização de um ficheiro binario de ajuda ou fonte. neste caso o comando ‘halt’.
       which halt: mostar o caminho completo para o binario executavel / .
 
-      # Sistema de fichetros
+# Sistema de fichetros
       mount /dev/hda2 /mnt/hda2: montar o disco com label hda2.
       umount /dev/hda2: desmontar o disco com label hda2.
       fuser -km /mnt/hda2: forçar o desmontar do dispositivo montado (hda2).

@@ -77,7 +77,7 @@
       cat /proc/mounts: mostrar o sistema de ficheros montado.
       lspci -tv: mostrar dispositivos PCI.
       lsusb -tv: mostrar dispositivos USB.
-      date: mostrar la fecha del sistema.
+      date: mostrar la fecha do sistema.
       cal 2021: mostrar o almanaque de 2021.
       cal 07 2011: mostrar o almanaque para o mes julio de 2021.
       date 041217002011.00: colocar (declarar, ajustar) data e hora.
@@ -259,50 +259,51 @@
       tail -f /var/log/messages: ver em tempo real o que foi adicionado no ficheiro.
 
 
+# Manipulação de texto
+
+      cat file1 file2 .. | command <> file1_in.txt_or_file1_out.txt: sintax geral para a manipulação de um texto ao utilizar PIPE, STDIN, STDOUT.
+      cat file1 | command( sed, grep, awk, grep, etc…) > result.txt: sintax geral para a manipulação de um texto  de um ficheiro e escrever o resultado em um novo ficheiro.
+      cat file1 | command( sed, grep, awk, grep, etc…) » result.txt: sintax geral para a manipulação de um texto  de um ficheiro e adicionar o resultado em um ficheiro existente.
+      grep Aug /var/log/messages: procurar palavras "Aug no ficheiro " buscar palabras “Aug” no ficheiro ‘/var/log/messages’.
+      grep ^Aug /var/log/messages:procurar palavras que começam por "Aug" em um ficheiro ‘/var/log/messages’. 
+      grep [0-9] /var/log/messages:selecionar todas as linhas do ficheiro ‘/var/log/messages’que contenham números.
+      grep Aug -R /var/log/*: buscar a string "Aug"no diretorio ‘/var/log’ recursivamente.
+      sed ‘s/stringa1/stringa2/g’ example.txt: transformar “string1” em “string2” no example.txt.
+      sed ‘/^$/d’ example.txt: eliminar todas as linhas em branco do exemple.txt.
+      sed ‘/ *#/d; /^$/d’ example.txt: eliminar comentários e linhas em branco do exemple.txt.
+      echo ‘esempio’ | tr ‘[:lower:]’ ‘[:upper:]’: transformar minusculas em maiusculas.
+      sed -e ‘1d’ result.txt: elimina a primeira linha do fichero result.txt.
+      sed -n ‘/stringa1/p’: visualizar somente as linhas que comecem pela palavra “string1”.
+
+# Análise do sistema de ficheiros
+
+      badblocks -v /dev/hda1: Fazer check dos blocos defeituosos no disco hda1.
+      fsck /dev/hda1: reparar a integridade do ficheiro do sistema Linux no disco hda1.
+      fsck.ext2 /dev/hda1: reparar a integridade do ficheiro do sistema ext2 no disco hda1.
+      e2fsck /dev/hda1: reparar a integridade do ficheiro do sistema ext2 no disco hda1.
+      e2fsck -j /dev/hda1: reparar a integridade do ficheiro do sistema ext3 no disco hda1.
+      fsck.ext3 /dev/hda1: reparar a integridade do ficheiro do sistema ext3 no disco hda1.
+      fsck.vfat /dev/hda1: reparar a integridade do ficheiro do sistema fat no disco hda1.
+      fsck.msdos /dev/hda1: reparar a integridade de um ficheiro do sistema dos no disco hda1.
+      dosfsck /dev/hda1: reparar a integridade de um ficheiro do sistema dos no disco hda1.
+
+# Formatar sistema de ficheiros
+
+mkfs /dev/hda1: cria um ficheiro de sistema tipo Linux na partição hda1.
+mke2fs /dev/hda1: cria um ficheiro de sistema tipo Linux ext2 no hda1.
+mke2fs -j /dev/hda1: cria um ficheiro de sistema tipo Linux ext3 na partição hda1.
+mkfs -t vfat 32 -F /dev/hda1: cria um ficheiro de sistema FAT32 no hda1.
+fdformat -n /dev/fd0: formatar o disco flooply.
+mkswap /dev/hda3: cria um ficheiro de sistema swap.
+
+# Trabalhar com swap
+
+mkswap /dev/hda3: cria um ficheiro de sistema swap.
+swapon /dev/hda3: ativa uma nova partição swap.
+swapon /dev/hda2 /dev/hdb3: ativar duas partições swap.
+
+
 # TODO ES TO PT
-
-# Manipulación de texto
-
-cat file1 file2 .. | command <> file1_in.txt_or_file1_out.txt: sintaxis general para la manipulación de texto utilizando PIPE, STDIN y STDOUT.<br>
-cat file1 | command( sed, grep, awk, grep, etc…) > result.txt: sintaxis general para manipular un texto de un fichero y escribir el resultado en un fichero nuevo.<br>
-cat file1 | command( sed, grep, awk, grep, etc…) » result.txt: sintaxis general para manipular un texto de un fichero y añadir resultado en un fichero existente.<br>
-grep Aug /var/log/messages: buscar palabras “Aug” en el fichero ‘/var/log/messages’.<br>
-grep ^Aug /var/log/messages: buscar palabras que comienzan con “Aug” en fichero ‘/var/log/messages’.<br>
-grep [0-9] /var/log/messages: seleccionar todas las líneas del fichero ‘/var/log/messages’ que contienen números.<br>
-grep Aug -R /var/log/*: buscar la cadena “Aug” en el directorio ‘/var/log’ y debajo.<br>
-sed ‘s/stringa1/stringa2/g’ example.txt: reubicar “string1” con “string2” en ejemplo.txt.<br>
-sed ‘/^$/d’ example.txt: eliminar todas las líneas en blanco desde el ejemplo.txt.<br>
-sed ‘/ *#/d; /^$/d’ example.txt: eliminar comentarios y líneas en blanco de ejemplo.txt.<br>
-echo ‘esempio’ | tr ‘[:lower:]’ ‘[:upper:]’: convertir minúsculas en mayúsculas.<br>
-sed -e ‘1d’ result.txt: elimina la primera línea del fichero ejemplo.txt.<br>
-sed -n ‘/stringa1/p’: visualizar solamente las líneas que contienen la palabra “string1”.<br>
-
-# Análisis del sistema de ficheros 
-
-badblocks -v /dev/hda1: Chequear los bloques defectuosos en el disco hda1.<br>
-fsck /dev/hda1: reparar / chequear la integridad del fichero del sistema Linux en el disco hda1.<br>
-fsck.ext2 /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 2 en el disco hda1.<br>
-e2fsck /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 2 en el disco hda1.<br>
-e2fsck -j /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 3 en el disco hda1.<br>
-fsck.ext3 /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 3 en el disco hda1.<br>
-fsck.vfat /dev/hda1: reparar / chequear la integridad del fichero sistema fat en el disco hda1.<br>
-fsck.msdos /dev/hda1: reparar / chequear la integridad de un fichero del sistema dos en el disco hda1.<br>
-dosfsck /dev/hda1: reparar / chequear la integridad de un fichero del sistema dos en el disco hda1.<br>
-
-# Formatear un sistema de ficheros
-
-mkfs /dev/hda1: crear un fichero de sistema tipo Linux en la partición hda1.<br>
-mke2fs /dev/hda1: crear un fichero de sistema tipo Linux ext 2 en hda1.<br>
-mke2fs -j /dev/hda1: crear un fichero de sistema tipo Linux ext3 (periódico) en la partición hda1.<br>
-mkfs -t vfat 32 -F /dev/hda1: crear un fichero de sistema FAT32 en hda1.<br>
-fdformat -n /dev/fd0: formatear un disco flooply.<br>
-mkswap /dev/hda3: crear un fichero de sistema swap.<br>
-
-# Trabajo con la SWAP
-
-mkswap /dev/hda3: crear fichero de sistema swap.<br>
-swapon /dev/hda3: activando una nueva partición swap.<br>
-swapon /dev/hda2 /dev/hdb3: activar dos particiones swap.<br>
 
 # (Backup)
  dump -0aj -f /tmp/home0.bak /home: hacer una salva completa del directorio ‘/home’.<br>
@@ -336,7 +337,7 @@ route add -net 0/0 gw IP_Gateway: configurar entrada predeterminada.<br>
 route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1: configurar ruta estática para buscar la red ‘192.168.0.0/16’.<br>
 route del 0/0 gw IP_gateway: eliminar la ruta estática.<br>
 echo “1” > /proc/sys/net/ipv4/ip_forward: activar el recorrido ip.<br>
-hostname: mostrar el nombre del host del sistema.<br>
+hostname: mostrar el nombre del host do sistema.<br>
 host www.example.com: buscar el nombre del host para resolver el nombre a una dirección ip(1).<br>
 nslookup www.example.com: buscar el nombre del host para resolver el nombre a una direccióm ip y viceversa.<br>
 ip link show: mostar el estado de enlace de todas las interfaces.<br>
@@ -378,8 +379,8 @@ pstree: mostrar un árbol sistema de procesos.<br>
 kill -9 ID_Processo: forzar el cierre de un proceso y terminarlo.<br>
 kill -1 ID_Processo: forzar un proceso para recargar la configuración.<br>
 lsof -p $$: mostrar una lista de ficheros abiertos por procesos.<br>
-lsof /home/user1: muestra una lista de ficheros abiertos en un camino dado del sistema.<br>
-strace -c ls >/dev/null: mostrar las llamadas del sistema hechas y recibidas por un proceso.<br>
+lsof /home/user1: muestra una lista de ficheros abiertos en un camino dado do sistema.<br>
+strace -c ls >/dev/null: mostrar las llamadas do sistema hechas y recibidas por un proceso.<br>
 strace -f -e open ls >/dev/null: mostrar las llamadas a la biblioteca.<br>
 watch -n1 ‘cat /proc/interrupts’: mostrar interrupciones en tiempo real.<br>
 last reboot: mostrar historial de reinicio.<br>
@@ -388,4 +389,4 @@ free -m: muestra el estado de la RAM en megabytes.<br>
 smartctl -A /dev/hda: monitorear la fiabilidad de un disco duro a través de SMART.<br>
 smartctl -i /dev/hda: chequear si SMART está activado en un disco duro.<br>
 tail /var/log/dmesg: mostrar eventos inherentes al proceso de carga del kernel.<br>
-tail /var/log/messages: mostrar los eventos del sistema.<br>
+tail /var/log/messages: mostrar los eventos do sistema.<br>

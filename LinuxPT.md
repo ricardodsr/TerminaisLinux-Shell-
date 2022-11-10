@@ -226,3 +226,33 @@
       zip file1.zip file1: criar um arquivo compactado em zip.
       zip -r file1.zip file1 file2 dir1:compactar, em zip, varos arquivos e diretorios de forma simultanea.
       unzip file1.zip: descompactar um arquivo zip.
+
+# Pacotes Deb (Debian, Ubuntu e derivados)
+
+      dpkg -i package.deb: instalar / actualizar um pacote deb.
+      dpkg -r package_name: eliminar um pacote deb do sistema.
+      dpkg -l: mostrar todos os pacotes deb instalados no sistema.
+      dpkg -l | grep httpd: mostrar todos os pacotes deb com o nome "HTTPD".
+      dpkg -s package_name: obter informação em um pacote especifico instalado no sistema.
+      dpkg -L package_name:mostrar a lista de ficheiros dados por um pacote instalado no sistema.
+      dpkg –contents package.deb: mostrar lista de ficheiros de um pacote ainda não instalado.
+      dpkg -S /bin/ping:verificar qual pacote pertence a un ficheiro.
+
+# Actualização de pacotes por APT (Debian, Ubuntu e derivados)
+
+apt-get install package_name: instalar / actualizar um pacote deb.
+apt-cdrom install package_name: instalar / actualizar um pacote deb a partir de um cdrom.
+apt-get update: actualizar a lista de pacotes.
+apt-get upgrade: actualizar todos os pacotes instalados.
+apt-get remove package_name: eliminar um pacote deb do sistema.
+apt-get check: verificar se as dependencias esrtao correctas.
+apt-get clean:limpar a cache dos pacotes descarregados.
+
+# Ver o conteudo de um ficheiro
+
+cat file1: ver os conteudos iniciais de um ficheiro.
+tac file1: ver os conteudos finais de um ficheiro.
+more file1: ver mais conteudo do ficheiro.
+head -2 file1: ver as duas primeiras linhas de um ficheiro.
+tail -2 file1: ver as duas ultimas linhas de um ficheiro.
+tail -f /var/log/messages: ver em tempo real o que foi adicionado no ficheiro.

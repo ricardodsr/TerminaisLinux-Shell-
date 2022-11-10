@@ -241,21 +241,20 @@
 
 # Actualização de pacotes por APT (Debian, Ubuntu e derivados)
 
-apt-get install package_name: instalar / actualizar um pacote deb.
-apt-cdrom install package_name: instalar / actualizar um pacote deb a partir de um cdrom.
-apt-get update: actualizar a lista de pacotes.
-apt-get upgrade: actualizar todos os pacotes instalados.
-apt-get remove package_name: eliminar um pacote deb do sistema.
-apt-get check: verificar se as dependencias esrtao correctas.
-apt-get clean:limpar a cache dos pacotes descarregados.
+      apt-get install package_name: instalar / actualizar um pacote deb.
+      apt-cdrom install package_name: instalar / actualizar um pacote deb a partir de um cdrom.
+      apt-get update: actualizar a lista de pacotes.
+      apt-get upgrade: actualizar todos os pacotes instalados.
+      apt-get remove package_name: eliminar um pacote deb do sistema.
+      apt-get check: verificar se as dependencias esrtao correctas.
+      apt-get clean:limpar a cache dos pacotes descarregados.
 
 # Ver o conteudo de um ficheiro
 
-cat file1: ver os conteudos iniciais de um ficheiro.
-tac file1: ver os conteudos finais de um ficheiro.
-more file1: ver mais conteudo do ficheiro.
-head -2 file1: ver as duas primeiras linhas de um ficheiro.
-tail -2 file1: ver as duas ultimas linhas de um ficheiro.
-tail -f /var/log/messages: ver em tempo real o que foi adicionado no ficheiro.
-=======
->>>>>>> 50748dec726ae6d8250e814357424795b9e94f8a
+      cat file1: ver os conteudos iniciais de um ficheiro.
+      tac file1: ver os conteudos finais de um ficheiro.
+      more file1: ver mais conteudo do ficheiro.
+      head -2 file1: ver as duas primeiras linhas de um ficheiro.
+      tail -2 file1: ver as duas ultimas linhas de um ficheiro.
+      tail -f /var/log/messages: ver em tempo real o que foi adicionado no ficheiro.
+

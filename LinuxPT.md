@@ -289,18 +289,18 @@
 
 # Formatar sistema de ficheiros
 
-mkfs /dev/hda1: cria um ficheiro de sistema tipo Linux na partição hda1.
-mke2fs /dev/hda1: cria um ficheiro de sistema tipo Linux ext2 no hda1.
-mke2fs -j /dev/hda1: cria um ficheiro de sistema tipo Linux ext3 na partição hda1.
-mkfs -t vfat 32 -F /dev/hda1: cria um ficheiro de sistema FAT32 no hda1.
-fdformat -n /dev/fd0: formatar o disco flooply.
-mkswap /dev/hda3: cria um ficheiro de sistema swap.
+      mkfs /dev/hda1: cria um ficheiro de sistema tipo Linux na partição hda1.
+      mke2fs /dev/hda1: cria um ficheiro de sistema tipo Linux ext2 no hda1.
+      mke2fs -j /dev/hda1: cria um ficheiro de sistema tipo Linux ext3 na partição hda1.
+      mkfs -t vfat 32 -F /dev/hda1: cria um ficheiro de sistema FAT32 no hda1.
+      fdformat -n /dev/fd0: formatar o disco flooply.
+      mkswap /dev/hda3: cria um ficheiro de sistema swap.
 
 # Trabalhar com swap
 
-mkswap /dev/hda3: cria um ficheiro de sistema swap.
-swapon /dev/hda3: ativa uma nova partição swap.
-swapon /dev/hda2 /dev/hdb3: ativar duas partições swap.
+      mkswap /dev/hda3: cria um ficheiro de sistema swap.
+      swapon /dev/hda3: ativa uma nova partição swap.
+      swapon /dev/hda2 /dev/hdb3: ativar duas partições swap.
 
 
 # TODO ES TO PT

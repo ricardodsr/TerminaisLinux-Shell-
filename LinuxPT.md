@@ -144,6 +144,7 @@
       which halt: mostar o caminho completo para o binario executavel / .
 
       # Sistema de fichetros
+# Sistema de fichetros
       mount /dev/hda2 /mnt/hda2: montar o disco com label hda2.
       umount /dev/hda2: desmontar o disco com label hda2.
       fuser -km /mnt/hda2: forçar o desmontar do dispositivo montado (hda2).
@@ -226,6 +227,7 @@
       zip file1.zip file1: criar um arquivo compactado em zip.
       zip -r file1.zip file1 file2 dir1:compactar, em zip, varos arquivos e diretorios de forma simultanea.
       unzip file1.zip: descompactar um arquivo zip.
+<<<<<<< HEAD
 
 # Pacotes Deb (Debian, Ubuntu e derivados)
 
@@ -256,3 +258,5 @@ more file1: ver mais conteudo do ficheiro.
 head -2 file1: ver as duas primeiras linhas de um ficheiro.
 tail -2 file1: ver as duas ultimas linhas de um ficheiro.
 tail -f /var/log/messages: ver em tempo real o que foi adicionado no ficheiro.
+=======
+>>>>>>> 50748dec726ae6d8250e814357424795b9e94f8a

@@ -226,7 +226,7 @@
       zip file1.zip file1: criar um arquivo compactado em zip.
       zip -r file1.zip file1 file2 dir1:compactar, em zip, varos arquivos e diretorios de forma simultanea.
       unzip file1.zip: descompactar um arquivo zip.
-<<<<<<< HEAD
+
 
 # Pacotes Deb (Debian, Ubuntu e derivados)
 

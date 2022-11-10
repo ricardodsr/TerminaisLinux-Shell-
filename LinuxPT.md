@@ -10,7 +10,7 @@
 
       /etc - arquivos de configuração, scripts de inicialização, etc.
 
-      /home - diretórios home para diferentes usuários
+      /home - diretórios home para diferentes utilizadores
 
       /initrd - usado quando está criando um processo de boot initrd personalizado
 
@@ -36,7 +36,7 @@
 
       /tmp - arquivos temporários
 
-      /usr - aplicativos e arquivos que são na maioria das vezes disponíveis ao acesso de todos usuários
+      /usr - aplicativos e arquivos que são na maioria das vezes disponíveis ao acesso de todos utilizadores
 
       /var - arquivos variáveis tal como logs e bancos de dados
 
@@ -162,7 +162,7 @@
       du -sk * | sort -rn: mostar o tamanho dos ficheiros e diretórios ordenados por tamanho.
 
 
-# Usuarios e Grupos
+# Utilizadores e Grupos
 
       groupadd nome_do_grupo: criar um grupo novo.
       groupdel nome_do_grupo: apagar um grupo.

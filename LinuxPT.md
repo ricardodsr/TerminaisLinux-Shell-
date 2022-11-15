@@ -103,10 +103,10 @@
       cd: ir para o diretório root(raiz).
       cd ~user1: ir para o diretório user1.
       cd –: voltar ao diretório anterior.
-      pwd: mostrar o camino do directorio de trabalho.
-      ls: mostar ficheiros do directorio atual.
-      ls -F:mostar ficheiros do directorio atual.
-      ls -l: mostar ficheiros e pastas do directorio atual.
+      pwd: mostrar o camino do diretório de trabalho.
+      ls: mostar ficheiros do diretório atual.
+      ls -F:mostar ficheiros do diretório atual.
+      ls -l: mostar ficheiros e pastas do diretório atual.
       ls -a: mostrar ficheiros ocultos.
       ls *[0-9]*: mostrar os ficheiros y pastas que contem números.
       tree: mostrar ficheros e pastas em forma de arvore.
@@ -118,7 +118,7 @@
       rmdir dir1: apagar a pasta ‘dir1’.
       rm -rf dir1: eliminar uma pasta e todo o ser conteudo de forma recursiva ‘dir1’.
       rm -rf dir1 dir2: eliminar duas pastas e todos os seus conteudos de forma recursiva ‘dir1’ ‘dir2’.
-      mv dir1 new_dir: renomear ou mver um ficheiro ou pasta par outro directorio.
+      mv dir1 new_dir: renomear ou mver um ficheiro ou pasta par outro diretório.
       cp file1: copiar um fichero.
       cp file1 file2: copiar dois ficheros ao mesmo tempo.
       cp dir /* .: copiar todos os ficheiros de um diretorio dentro do diretório de trabalho actual.
@@ -264,10 +264,10 @@
       cat file1 file2 .. | command <> file1_in.txt_or_file1_out.txt: sintax geral para a manipulação de um texto ao utilizar PIPE, STDIN, STDOUT.
       cat file1 | command( sed, grep, awk, grep, etc…) > result.txt: sintax geral para a manipulação de um texto  de um ficheiro e escrever o resultado em um novo ficheiro.
       cat file1 | command( sed, grep, awk, grep, etc…) » result.txt: sintax geral para a manipulação de um texto  de um ficheiro e adicionar o resultado em um ficheiro existente.
-      grep Aug /var/log/messages: procurar palavras "Aug no ficheiro " buscar palabras “Aug” no ficheiro ‘/var/log/messages’.
+      grep Aug /var/log/messages: procurar palavras "Aug no ficheiro " procurar palabras “Aug” no ficheiro ‘/var/log/messages’.
       grep ^Aug /var/log/messages:procurar palavras que começam por "Aug" em um ficheiro ‘/var/log/messages’. 
       grep [0-9] /var/log/messages:selecionar todas as linhas do ficheiro ‘/var/log/messages’que contenham números.
-      grep Aug -R /var/log/*: buscar a string "Aug"no diretorio ‘/var/log’ recursivamente.
+      grep Aug -R /var/log/*: procurar a string "Aug"no diretorio ‘/var/log’ recursivamente.
       sed ‘s/stringa1/stringa2/g’ example.txt: transformar “string1” em “string2” no example.txt.
       sed ‘/^$/d’ example.txt: eliminar todas as linhas em branco do exemple.txt.
       sed ‘/ *#/d; /^$/d’ example.txt: eliminar comentários e linhas em branco do exemple.txt.
@@ -302,91 +302,90 @@
       swapon /dev/hda3: ativa uma nova partição swap.
       swapon /dev/hda2 /dev/hdb3: ativar duas partições swap.
 
-
-# TODO ES TO PT
-
 # (Backup)
- dump -0aj -f /tmp/home0.bak /home: hacer una salva completa del directorio ‘/home’.<br>
-dump -1aj -f /tmp/home0.bak /home: hacer una salva incremental del directorio ‘/home’.<br>
-restore -if /tmp/home0.bak: restaurando una salva interactivamente.<br>
-rsync -rogpav –delete /home /tmp: sincronización entre directorios.<br>
-rsync -rogpav -e ssh –delete /home ip_address:/tmp: rsync a través del túnel SSH.<br>
-rsync -az -e ssh –delete ip_addr:/home/public /home/local: sincronizar un directorio local con un directorio remoto a través de ssh y de compresión.<br>
-rsync -az -e ssh –delete /home/local ip_addr:/home/public: sincronizar un directorio remoto con un directorio local a través de ssh y de compresión.<br>
-dd bs=1M if=/dev/hda | gzip | ssh user@ip_addr ‘dd of=hda.gz’: hacer una salva de un disco duro en un host remoto a través de ssh.<br>
-dd if=/dev/sda of=/tmp/file1: salvar el contenido de un disco duro a un fichero. (En este caso el disco duro es “sda” y el fichero “file1”).<br>
-tar -Puf backup.tar /home/user: hacer una salva incremental del directorio ‘/home/user’.<br>
-( cd /tmp/local/ && tar c . ) | ssh -C user@ip_addr ‘cd /home/share/ && tar x -p’: copiar el contenido de un directorio en un directorio remoto a través de ssh.<br>
-( tar c /home ) | ssh -C user@ip_addr ‘cd /home/backup-home && tar x -p’: copiar un directorio local en un directorio remoto a través de ssh.<br>
-tar cf – . | (cd /tmp/backup ; tar xf – ): copia local conservando las licencias y enlaces desde un directorio a otro.<br>
-find /home/user1 -name ‘*.txt’ | xargs cp -av –target-directory=/home/backup/ –parents: encontrar y copiar todos los ficheros con extensión ‘.txt’ de un directorio a otro.<br>
-find /var/log -name ‘*.log’ | tar cv –files-from=- | bzip2 > log.tar.bz2: encontrar todos los ficheros con extensión ‘.log’ y hacer un archivo bzip.<br>
-dd if=/dev/hda of=/dev/fd0 bs=512 count=1: hacer una copia del MRB (Master Boot Record) a un disco floppy.<br>
-dd if=/dev/fd0 of=/dev/hda bs=512 count=1: restaurar la copia del MBR (Master Boot Record) salvada en un floppy.<br>
+      dump -0aj -f /tmp/home0.bak /home: fazer backup completo do diretório ‘/home’.
+      dump -1aj -f /tmp/home0.bak /home: fazer backup incremental do diretorio ‘/home’.
+      rsync -rogpav –delete /home /tmp: sincronización entre diretórios.
+      rsync -rogpav -e ssh –delete /home ip_address:/tmp: rsync através do túnel SSH.
+      rsync -az -e ssh –delete ip_addr:/home/public /home/local: sincronizar um diretório local com um diretório remoto através de ssh e de compresão.
+      rsync -az -e ssh –delete /home/local ip_addr:/home/public: sincronizar um diretório remoto com um diretório local através de ssh e de compressão.
+      dd bs=1M if=/dev/hda | gzip | ssh user@ip_addr ‘dd of=hda.gz’: fazer backup de um disco duro em um host remoto através de ssh.
+      dd if=/dev/sda of=/tmp/file1: salvar o conteúdo de um disco duro para um fichero.
+      tar -Puf backup.tar /home/user: fazer backup incremental do diretorio ‘/home/user’.
+      ( cd /tmp/local/ && tar c . ) | ssh -C user@ip_addr ‘cd /home/share/ && tar x -p’: copiar o conteudo de um diretório em um diretório remoto a través de ssh.
+      ( tar c /home ) | ssh -C user@ip_addr ‘cd /home/backup-home && tar x -p’: copiar um diretório local em um diretório remoto através de ssh.
+      tar cf – . | (cd /tmp/backup ; tar xf – ): copia local conservando as licenças e links desde um diretório para otro.
+      find /home/user1 -name ‘*.txt’ | xargs cp -av –target-directory=/home/backup/ –parents: encontrar e copiar todos os ficheros con extenção ‘.txt’ de um diretório para otro.
+      find /var/log -name ‘*.log’ | tar cv –files-from=- | bzip2 > log.tar.bz2: encontrar todos os ficheiros com extenssão ‘.log’ e fazer um archivo bzip.
+
+      dd if=/dev/hda of=/dev/fd0 bs=512 count=1: fazer uma copia do MRB (Master Boot Record) para uma floppy.
+      dd if=/dev/fd0 of=/dev/hda bs=512 count=1: restaurar copia do MBR (Master Boot Record) guardada numa floppy.
 
 # Trabajo con la RED ( LAN y Wi-Fi)
 
-ifconfig eth0: mostrar la configuración de una tarjeta de red Ethernet.<br>
-ifup eth0: activar una interface ‘eth0’.<br>
-ifdown eth0: deshabilitar una interface ‘eth0’.<br>
-ifconfig eth0 192.168.1.1 netmask 255.255.255.0: configurar una dirección IP.<br>
-ifconfig eth0 promisc: configurar ‘eth0’en modo común para obtener los paquetes (sniffing).<br>
-dhclient eth0: activar la interface ‘eth0’ en modo dhcp.<br>
-route -n: mostrar mesa de recorrido.<br>
-route add -net 0/0 gw IP_Gateway: configurar entrada predeterminada.<br>
-route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1: configurar ruta estática para buscar la red ‘192.168.0.0/16’.<br>
-route del 0/0 gw IP_gateway: eliminar la ruta estática.<br>
-echo “1” > /proc/sys/net/ipv4/ip_forward: activar el recorrido ip.<br>
-hostname: mostrar el nombre del host do sistema.<br>
-host www.example.com: buscar el nombre del host para resolver el nombre a una dirección ip(1).<br>
-nslookup www.example.com: buscar el nombre del host para resolver el nombre a una direccióm ip y viceversa.<br>
-ip link show: mostar el estado de enlace de todas las interfaces.<br>
-mii-tool eth0: mostar el estado de enlace de ‘eth0’.<br>
-ethtool eth0: mostrar las estadísticas de tarjeta de red ‘eth0’.<br>
-netstat -tup: mostrar todas las conexiones de red activas y sus PID.<br>
-netstat -tupl: mostrar todos los servicios de escucha de red en el sistema y sus PID.<br>
-tcpdump tcp port 80: mostrar todo el tráfico HTTP.<br>
-iwlist scan: mostrar las redes inalámbricas.<br>
-iwconfig eth1: mostrar la configuración de una tarjeta de red inalámbrica.<br>
-whois www.example.com: buscar en base de datos Whois.<br>
+      ifconfig eth0: mostrar a configuração de uma placa de rede Ethernet.
+      ifup eth0: ativar a interface ‘eth0’.
+      ifdown eth0: desativar a interface ‘eth0’.
+      ifconfig eth0 192.168.1.1 netmask 255.255.255.0: configurar uma direção de IP.
+      ifconfig eth0 promisc: configurar ‘eth0’ em modo común para obter os pacotes (sniffing).
+      dhclient eth0: activar a interface ‘eth0’ em modo dhcp.
+      route -n: mostrar tabela de roteamento.
+      route add -net 0/0 gw IP_Gateway: configurar entrada predefenida.
+      route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1: configurar rota estática para procurar a rede ‘192.168.0.0/16’.
+      route del 0/0 gw IP_gateway: eliminar a rota estática.
+      echo “1” > /proc/sys/net/ipv4/ip_forward: activar o mapeamento ip.
+      hostname: mostrar o nome do host do sistema.
+      host www.example.com: procurar o nome do host para resolver o nome de uma direção ip.
+      nslookup www.example.com: procurar o nome do host para resolver o nome de uma direção ip e viceversa.
+      ip link show: mostar o estado do link de todas as interfaces.
+      mii-tool eth0: mostar o estado do link de ‘eth0’.
+      ethtool eth0: mostrar as testatisticas da placa de rede ‘eth0’.
+      netstat -tup: mostrar todas as conexões de rede activas e seus PID.
+      netstat -tupl: mostrar todos os serviços de escuta de rede no sistema e seus PID.
+      tcpdump tcp port 80: mostrar todo o tráfego HTTP.
+      iwlist scan: mostrar as redes wifi.
+      iwconfig eth1: mostrar la configuración de una tarjeta de red wifi.
+      whois www.example.com: procurar na base de dados Whois.
 
 # Redes de Microsoft Windows (SAMBA)
 
-nbtscan ip_addr: resolución de nombre de red bios.<br>
-nmblookup -A ip_addr: resolución de nombre de red bios.<br>
-smbclient -L ip_addr/hostname: mostrar acciones remotas de un host en windows.<br>
+      nbtscan ip_addr: Nome de rede bios.
+      nmblookup -A ip_addr: Nome de rede bios.
+      smbclient -L ip_addr/hostname: mostrar ações remotas de um host em windows.
+
+# TODO ES TO PT
 
 # Tablas IP (CORTAFUEGOS)
 
-iptables -t filter -L: mostrar todas las cadenas de la tabla de filtro.<br>
-iptables -t nat -L: mostrar todas las cadenas de la tabla nat.<br>
-iptables -t filter -F: limpiar todas las reglas de la tabla de filtro.<br>
-iptables -t nat -F: limpiar todas las reglas de la tabla nat.<br>
-iptables -t filter -X: borrar cualquier cadena creada por el usuario.<br>
-iptables -t filter -A INPUT -p tcp –dport telnet -j ACCEPT: permitir las conexiones telnet para entar.<br>
-iptables -t filter -A OUTPUT -p tcp –dport http -j DROP: bloquear las conexiones HTTP para salir.<br>
-iptables -t filter -A FORWARD -p tcp –dport pop3 -j ACCEPT: permitir las conexiones POP a una cadena delantera.<br>
-iptables -t filter -A INPUT -j LOG –log-prefix “DROP INPUT”: registrando una cadena de entrada.<br>
-iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE: configurar un PAT (Puerto de traducción de dirección) en eth0, ocultando los paquetes de salida forzada.<br>
-iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m tcp –dport 22 -j DNAT –to-destination 10.0.0.2:22: redireccionar los paquetes diriguidos de un host a otro.<br>
+iptables -t filter -L: mostrar todas las cadenas de la tabla de filtro.
+iptables -t nat -L: mostrar todas las cadenas de la tabla nat.
+iptables -t filter -F: limpiar todas las reglas de la tabla de filtro.
+iptables -t nat -F: limpiar todas las reglas de la tabla nat.
+iptables -t filter -X: borrar cualquier cadena creada por el usuario.
+iptables -t filter -A INPUT -p tcp –dport telnet -j ACCEPT: permitir as conexões telnet para entar.
+iptables -t filter -A OUTPUT -p tcp –dport http -j DROP: bloquear as conexões HTTP para salir.
+iptables -t filter -A FORWARD -p tcp –dport pop3 -j ACCEPT: permitir as conexões POP a una cadena delantera.
+iptables -t filter -A INPUT -j LOG –log-prefix “DROP INPUT”: registrando una cadena de entrada.
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE: configurar un PAT (Puerto de traducción de dirección) en eth0, ocultando los paquetes de salida forzada.
+iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m tcp –dport 22 -j DNAT –to-destination 10.0.0.2:22: redireccionar los paquetes diriguidos de un host a otro.
 
 # Monitoreando y depurando
 
-top: mostrar las tareas de linux usando la mayoría cpu.<br>
-ps -eafw: muestra las tareas Linux.<br>
-ps -e -o pid,args –forest: muestra las tareas Linux en un modo jerárquico.<br>
-pstree: mostrar un árbol sistema de procesos.<br>
-kill -9 ID_Processo: forzar el cierre de un proceso y terminarlo.<br>
-kill -1 ID_Processo: forzar un proceso para recargar la configuración.<br>
-lsof -p $$: mostrar una lista de ficheros abiertos por procesos.<br>
-lsof /home/user1: muestra una lista de ficheros abiertos en un camino dado do sistema.<br>
-strace -c ls >/dev/null: mostrar las llamadas do sistema hechas y recibidas por un proceso.<br>
-strace -f -e open ls >/dev/null: mostrar las llamadas a la biblioteca.<br>
-watch -n1 ‘cat /proc/interrupts’: mostrar interrupciones en tiempo real.<br>
-last reboot: mostrar historial de reinicio.<br>
-lsmod: mostrar el kernel cargado.<br>
-free -m: muestra el estado de la RAM en megabytes.<br>
-smartctl -A /dev/hda: monitorear la fiabilidad de un disco duro a través de SMART.<br>
-smartctl -i /dev/hda: chequear si SMART está activado en un disco duro.<br>
-tail /var/log/dmesg: mostrar eventos inherentes al proceso de carga del kernel.<br>
-tail /var/log/messages: mostrar los eventos do sistema.<br>
+top: mostrar las tareas de linux usando la mayoría cpu.
+ps -eafw: muestra las tareas Linux.
+ps -e -o pid,args –forest: muestra las tareas Linux en un modo jerárquico.
+pstree: mostrar un árbol sistema de procesos.
+kill -9 ID_Processo: forzar el cierre de un proceso y terminarlo.
+kill -1 ID_Processo: forzar un proceso para recargar la configuración.
+lsof -p $$: mostrar una lista de ficheros abiertos por procesos.
+lsof /home/user1: muestra una lista de ficheros abiertos en un camino dado do sistema.
+strace -c ls >/dev/null: mostrar las llamadas do sistema hechas y recibidas por un proceso.
+strace -f -e open ls >/dev/null: mostrar las llamadas a la biblioteca.
+watch -n1 ‘cat /proc/interrupts’: mostrar interrupciones en tiempo real.
+last reboot: mostrar historial de reinicio.
+lsmod: mostrar el kernel cargado.
+free -m: muestra el estado de la RAM en megabytes.
+smartctl -A /dev/hda: monitorear la fiabilidad de un disco duro a través de SMART.
+smartctl -i /dev/hda: chequear si SMART está activado en un disco duro.
+tail /var/log/dmesg: mostrar eventos inherentes al proceso de carga del kernel.
+tail /var/log/messages: mostrar los eventos do sistema.

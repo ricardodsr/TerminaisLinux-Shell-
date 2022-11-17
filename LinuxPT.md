@@ -321,7 +321,7 @@
       dd if=/dev/hda of=/dev/fd0 bs=512 count=1: fazer uma copia do MRB (Master Boot Record) para uma floppy.
       dd if=/dev/fd0 of=/dev/hda bs=512 count=1: restaurar copia do MBR (Master Boot Record) guardada numa floppy.
 
-# Trabajo con la RED ( LAN y Wi-Fi)
+# REDE ( LAN e Wi-Fi)
 
       ifconfig eth0: mostrar a configuração de uma placa de rede Ethernet.
       ifup eth0: ativar a interface ‘eth0’.
@@ -347,7 +347,7 @@
       iwconfig eth1: mostrar la configuración de una tarjeta de red wifi.
       whois www.example.com: procurar na base de dados Whois.
 
-# Redes de Microsoft Windows (SAMBA)
+# Redes Windows (SAMBA)
 
       nbtscan ip_addr: Nome de rede bios.
       nmblookup -A ip_addr: Nome de rede bios.

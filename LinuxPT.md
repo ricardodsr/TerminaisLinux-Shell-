@@ -353,39 +353,38 @@
       nmblookup -A ip_addr: Nome de rede bios.
       smbclient -L ip_addr/hostname: mostrar ações remotas de um host em windows.
 
-# TODO ES TO PT
+# Tabelas IP (firewall)
 
-# Tablas IP (CORTAFUEGOS)
+      iptables -t filter -L: exibir todas as strings na tabela de filtros.
+      iptables -t nat -L: mostra todas as strings da tabela nat.
+      iptables -t filter -F: limpa todas as regras da tabela de filtros.
+      iptables -t nat -F: limpa todas as regras da tabela nat.
+      iptables -t filter -X: excluir todas as strings criadas pelo usuário.
+      iptables -t filter -A INPUT -p tcp –dport telnet -j ACCEPT: permitir as conexões telnet para entar.
+      iptables -t filter -A OUTPUT -p tcp –dport http -j DROP: bloquear as conexões HTTP para salir.
+      iptables -t filter -A FORWARD -p tcp –dport pop3 -j ACCEPT: permitir as conexões POP  a uma corrente frontal.
+      iptables -t filter -A INPUT -j LOG –log-prefix “DROP INPUT”: registrando uma string de entrada.
+      iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE: configura um PAT em eth0, ocultando os pacotes de saida forçados.
+      iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m tcp –dport 22 -j DNAT –to-destination 10.0.0.2:22: 
+      redirecionar pacotes endereçados de um host para outro.
 
-iptables -t filter -L: mostrar todas las cadenas de la tabla de filtro.
-iptables -t nat -L: mostrar todas las cadenas de la tabla nat.
-iptables -t filter -F: limpiar todas las reglas de la tabla de filtro.
-iptables -t nat -F: limpiar todas las reglas de la tabla nat.
-iptables -t filter -X: borrar cualquier cadena creada por el usuario.
-iptables -t filter -A INPUT -p tcp –dport telnet -j ACCEPT: permitir as conexões telnet para entar.
-iptables -t filter -A OUTPUT -p tcp –dport http -j DROP: bloquear as conexões HTTP para salir.
-iptables -t filter -A FORWARD -p tcp –dport pop3 -j ACCEPT: permitir as conexões POP a una cadena delantera.
-iptables -t filter -A INPUT -j LOG –log-prefix “DROP INPUT”: registrando una cadena de entrada.
-iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE: configurar un PAT (Puerto de traducción de dirección) en eth0, ocultando los paquetes de salida forzada.
-iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m tcp –dport 22 -j DNAT –to-destination 10.0.0.2:22: redireccionar los paquetes diriguidos de un host a otro.
+# Monitoramento e depuração.
 
-# Monitoreando y depurando
-
-top: mostrar las tareas de linux usando la mayoría cpu.
-ps -eafw: muestra las tareas Linux.
-ps -e -o pid,args –forest: muestra las tareas Linux en un modo jerárquico.
-pstree: mostrar un árbol sistema de procesos.
-kill -9 ID_Processo: forzar el cierre de un proceso y terminarlo.
-kill -1 ID_Processo: forzar un proceso para recargar la configuración.
-lsof -p $$: mostrar una lista de ficheros abiertos por procesos.
-lsof /home/user1: muestra una lista de ficheros abiertos en un camino dado do sistema.
-strace -c ls >/dev/null: mostrar las llamadas do sistema hechas y recibidas por un proceso.
-strace -f -e open ls >/dev/null: mostrar las llamadas a la biblioteca.
-watch -n1 ‘cat /proc/interrupts’: mostrar interrupciones en tiempo real.
-last reboot: mostrar historial de reinicio.
-lsmod: mostrar el kernel cargado.
-free -m: muestra el estado de la RAM en megabytes.
-smartctl -A /dev/hda: monitorear la fiabilidad de un disco duro a través de SMART.
-smartctl -i /dev/hda: chequear si SMART está activado en un disco duro.
-tail /var/log/dmesg: mostrar eventos inherentes al proceso de carga del kernel.
-tail /var/log/messages: mostrar los eventos do sistema.
+      top: mostre as tarefas do linux usando a maioria da CPU.
+      ps -eafw: mostra as tarefas do Linux.
+      ps -e -o pid,args –forest: exibe as tarefas do Linux de forma hierárquica.
+      pstree: mostrar uma árvore do sistema de processo.
+      kill -9 ID_Processo: forçar um processo a fechar e finalizá-lo.
+      kill -1 ID_Processo: forçar um processo para recarregar a configuração.
+      lsof -p $$: exibir uma lista de arquivos abertos por processos.
+      lsof /home/user1: exibe uma lista de arquivos abertos em um determinado caminho do sistema.
+      strace -c ls >/dev/null: exibir as chamadas de sistema feitas e recebidas por um processo.
+      strace -f -e open ls >/dev/null:exibir chamadas de biblioteca.
+      watch -n1 ‘cat /proc/interrupts’: mostrar interrupções em tempo real.
+      last reboot: mostrar histórico de reinicialização.
+      lsmod: mostrar o kernel carregado.
+      free -m: exibe o status da RAM em megabytes.
+      smartctl -A /dev/hda: monitora a fiabilidade de um disco rígido através do SMART.
+      smartctl -i /dev/hda: verifica se o SMART está ativado em um disco rígido.
+      tail /var/log/dmesg: exibir eventos inerentes ao processo de carregamento do kernel.
+      tail /var/log/messages: exibir eventos do sistema. 

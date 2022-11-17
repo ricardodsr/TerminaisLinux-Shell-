@@ -387,4 +387,4 @@
       smartctl -A /dev/hda: monitora a fiabilidade de um disco rígido através do SMART.
       smartctl -i /dev/hda: verifica se o SMART está ativado em um disco rígido.
       tail /var/log/dmesg: exibir eventos inerentes ao processo de carregamento do kernel.
-      tail /var/log/messages: exibir eventos do sistema. 
+      tail /var/log/messages: exibir eventos do sistema.
